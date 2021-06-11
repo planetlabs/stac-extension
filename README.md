@@ -1,11 +1,11 @@
-# Template Extension Specification
+# Planet Extension Specification
 
-- **Title:** Template
+- **Title:** Planet 
 - **Identifier:** <https://stac-extensions.github.io/template/v1.0.0/schema.json>
-- **Field Name Prefix:** template
+- **Field Name Prefix:** pl
 - **Scope:** Item, Collection
 - **Extension [Maturity Classification](https://github.com/radiantearth/stac-spec/tree/master/extensions/README.md#extension-maturity):** Proposal
-- **Owner**: @your-gh-handles @person2
+- **Owner**: @cholmes
 
 This document explains the Template Extension to the [SpatioTemporal Asset Catalog](https://github.com/radiantearth/stac-spec) (STAC) specification.
 This is the place to add a short introduction.

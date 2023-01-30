@@ -1,0 +1,155 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "id": "20190813_013745_5254519_RapidEye-3",
+  "properties": {
+    "updated": "2019-08-14T06:16:26Z",
+    "created": "2019-08-14T06:16:26Z",
+    "gsd": 6.5,
+    "constellation": "rapideye",
+    "platform": "RapidEye-3",
+    "eo:cloud_cover": 9,
+    "view:off_nadir": 3.4487,
+    "view:sun_azimuth": 121.08267,
+    "view:sun_elevation": 59.57737,
+    "proj:epsg": 32652,
+    "pl:black_fill": 0,
+    "pl:grid_cell": 5254519,
+    "pl:ground_control": true,
+    "pl:item_type": "REOrthoTile",
+    "pl:pixel_resolution": 5,
+    "pl:strip_id": "40352462",
+    "published": "2019-08-14T06:16:26Z",
+    "datetime": "2019-08-13T01:37:45Z"
+  },
+  "geometry": {
+    "coordinates": [
+      [
+        [
+          130.0295504,
+          33.620011
+        ],
+        [
+          130.2990123,
+          33.6174751
+        ],
+        [
+          130.2956483,
+          33.3920412
+        ],
+        [
+          130.0268841,
+          33.3945564
+        ],
+        [
+          130.0295504,
+          33.620011
+        ]
+      ]
+    ],
+    "type": "Polygon"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json"
+    }
+  ],
+  "assets": {
+    "20190813_013745_5254519_RapidEye-3_metadata_json": {
+      "href": "./20190813_013745_5254519_RapidEye-3_metadata.json",
+      "type": "application/json",
+      "roles": [
+        "metadata"
+      ]
+    },
+    "5254519_2019-08-13_RE3_3A_Visual_tif": {
+      "href": "./5254519_2019-08-13_RE3_3A_Visual.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "pl:asset_type": "visual",
+      "pl:bundle_type": "visual",
+      "proj:shape": [
+        5000,
+        5000
+      ],
+      "proj:transform": [
+        5,
+        0,
+        595500,
+        0,
+        -5,
+        3720500,
+        0,
+        0,
+        1
+      ],
+      "raster:bands": [
+        {
+          "data_type": "uint8",
+          "spatial_resolution": 5,
+          "statistics": {
+            "minimum": 0,
+            "maximum": 255
+          }
+        },
+        {
+          "data_type": "uint8",
+          "spatial_resolution": 5,
+          "statistics": {
+            "minimum": 0,
+            "maximum": 255
+          }
+        },
+        {
+          "data_type": "uint8",
+          "spatial_resolution": 5,
+          "statistics": {
+            "minimum": 0,
+            "maximum": 255
+          }
+        },
+        {
+          "data_type": "uint8",
+          "spatial_resolution": 5,
+          "statistics": {
+            "minimum": 255,
+            "maximum": 255
+          }
+        }
+      ],
+      "roles": [
+        "data",
+        "visual"
+      ]
+    },
+    "5254519_2019-08-13_RE3_3A_Visual_metadata_xml": {
+      "href": "./5254519_2019-08-13_RE3_3A_Visual_metadata.xml",
+      "type": "text/xml",
+      "pl:asset_type": "visual_xml",
+      "pl:bundle_type": "visual",
+      "roles": [
+        "metadata",
+        "visual"
+      ]
+    }
+  },
+  "bbox": [
+    130.0268841,
+    33.3920412,
+    130.2990123,
+    33.620011
+  ],
+  "stac_extensions": [
+    "https://planetlabs.github.io/stac-extension/v1.0.0-beta.1/schema.json",
+    "https://stac-extensions.github.io/eo/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/view/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ]
+}

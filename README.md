@@ -1,0 +1,275 @@
+# Planet Labs Extension Specification
+
+- **Title:** Planet Labs
+- **Identifier:** <https://planetlabs.github.io/stac-extension/v1.0.0-beta.1/schema.json>
+- **Field Name Prefix:** pl
+- **Scope:** Item
+- **Extension [Maturity Classification](https://github.com/radiantearth/stac-spec/tree/master/extensions/README.md#extension-maturity):** Proposal
+- **Owner**: @cholmes @tschaub @m-mohr
+
+This document explains the Planet Labs Extension to the
+[SpatioTemporal Asset Catalog](https://github.com/radiantearth/stac-spec) (STAC) specification.
+The extension defines fields specific to the products offered by Planet Labs, primarily for PlanetScope, RapidEye and SkySat.
+
+The fields defined here are usually just a 1:1 mapping from the Item Properties defined in the
+[Planet API](https://developers.planet.com/docs/apis/data/items-assets/).
+If possible the fields are mapped to commonly used fields in STAC, including a variety of extensions (e.g. eo, view).
+See [Field mapping and scope](mapping.md) for a table that maps between Planet Item Properties and STAC fields.
+Sometimes fields don't map 1:1 and need a slight conversion, which will be mentioned in the description for each field here.
+It also gives an overview over the fields that are available for the individual item types.
+
+**The following item types are covered by this extension:**
+- PlanetScope:
+  - [PSOrthoTile](https://developers.planet.com/docs/data/psorthotile/)
+  - [PSScene](https://developers.planet.com/docs/data/psscene/)
+- RapidEye:
+  - [REOrthoTile](https://developers.planet.com/docs/data/reorthotile/)
+  - [REScene](https://developers.planet.com/docs/data/rescene/)
+- SkySat:
+  - [SkySatCollect](https://developers.planet.com/docs/data/skysatcollect/)
+  - [SkySatScene](https://developers.planet.com/docs/data/skysatscene/)
+  - [SkySatVideo](https://developers.planet.com/docs/data/skysatvideo/)
+
+Generally, the deprecated item types `PSScene3Band` and `PSScene4Band` are not supported and will not be validated.
+
+**Important links for this extension:**
+- Examples:
+  - [Browse in STAC Browser](https://radiantearth.github.io/stac-browser/#/external/raw.githubusercontent.com/m-mohr/planet-stac-extension/main/examples/catalog.json)
+  - PlanetScope:
+    - [PSScene Item](examples/items/psscene.json)
+    - [PSOrthoTile Item](examples/items/psorthotile.json)
+  - RapidEye:
+    - [REOrthoTile Item](examples/items/psorthotile.json)
+    - [REScene Item](examples/items/rescene.json)
+  - SkySat:
+    - [SkySatCollect Item](examples/items/skysatcollect.json)
+    - [SkySatScene Item](examples/items/skysatscene.json)
+- [JSON Schema](json-schema/schema.json)
+- [Changelog](./CHANGELOG.md)
+
+## Item Properties Fields
+
+The fields in the tables below can be used in these parts of STAC documents:
+- [ ] Catalogs
+- [ ] Collections
+- [x] Item Properties (incl. Summaries in Collections)
+- [ ] Assets (for both Collections and Items, incl. Item Asset Definitions in Collections)
+- [ ] Links
+
+### Planet-specific
+
+| Field Name              | Type    | Description |
+| ----------------------- | ------- | ----------- |
+| pl:black_fill           | number  | The percentage of the item containing black fill in the range 0 - 100 (inclusive). |
+| pl:clear_percent        | number  | Percent of clear values in dataset. Percentages must be provided in the range 0 - 100 (inclusive). |
+| pl:grid_cell            | integer | The grid cell identifier of the gridded item. |
+| pl:ground_control       | boolean | Positional accuracy of the item. If the item has uncertain positional accuracy, this value will be `false`. |
+| pl:ground_control_ratio | number  | Ratio of individual scenes that are successfully rectified, in the range 0 - 1 (inclusive). Only applies to `SkySatCollect`. |
+| pl:item_type            | string  | **REQUIRED**. Name of the item type. Allowed values: see below |
+| pl:pixel_resolution     | number  | The spatial resolution, in meters. (This is meant to be deprecated in favor of [`spatial_resolution`](https://github.com/radiantearth/stac-spec/issues/1196).) |
+| pl:publishing_stage     | string  | Stage of [publishing for an item](https://developers.planet.com/docs/apis/data/items-assets/#item-publishing-lifecycle). Allowed values: `preview`, `standard`, `finalized`. |
+| pl:quality_category     | string  | Metric for image quality. Allowed values: `standard`, `test`. |
+| pl:strip_id             | string  | **REQUIRED.** The unique identifier of the image stripe that the item came from. |
+
+**Additional REQUIRED fields per `pl:item_type`:**
+
+| Field Name              | PSOrthoTile | PSScene | REOrthoTile | REScene | SkySatCollect | SkySatScene | SkySatVideo |
+| ----------------------- | ----------- | ------- | ----------- | ------- | ------------- | ----------- | ----------- |
+| pl:black_fill           | ✓ |   | ✓ | ✓ |   |   |   |
+| pl:clear_percent        | ✓ | ✓ |   |   | ✓ | ✓ |   |
+| pl:grid_cell            | ✓ |   | ✓ |   |   |   |   |
+| pl:ground_control       | ✓ | ✓ | ✓ |   |   | ✓ |   |
+| pl:ground_control_ratio |   |   |   |   | ✓ |   |   |
+| pl:pixel_resolution     | ✓ | ✓ | ✓ |   | ✓ | ✓ |   |
+| pl:publishing_stage     | ✓ | ✓ |   |   | ✓ | ✓ | ✓ |
+| pl:quality_category     | ✓ | ✓ |   |   | ✓ | ✓ | ✓ |
+
+#### pl:item_type
+
+The following values exist for the Planet Labs satellites:
+
+- PlanetScope:
+  - [`PSOrthoTile`](https://developers.planet.com/docs/data/psorthotile/)
+  - [`PSScene`](https://developers.planet.com/docs/data/psscene/)
+- RapidEye:
+  - [`REOrthoTile`](https://developers.planet.com/docs/data/reorthotile/)
+  - [`REScene`](https://developers.planet.com/docs/data/rescene/)
+- SkySat:
+  - [`SkySatCollect`](https://developers.planet.com/docs/data/skysatcollect/)
+  - [`SkySatScene`](https://developers.planet.com/docs/data/skysatscene/)
+  - [`SkySatVideo`](https://developers.planet.com/docs/data/skysatvideo/)
+
+### Other Extensions and Specifications
+
+This extension uses and requires additional fields from other specifications/extensions.
+
+The following specifications are relevant here:
+- [STAC Common Metadata](https://github.com/radiantearth/stac-spec/blob/master/item-spec/common-metadata.md)
+- [STAC EO Extension](https://github.com/stac-extensions/eo) (v1.1.0 or later)
+- [STAC Viewing Angles Extension](https://github.com/stac-extensions/view) (v1.0.0 or later)
+
+| Field Name         | Type       | Description |
+| ------------------ | ---------- | ----------- |
+| constellation      | string     | **REQUIRED**. As defined in common metadata, but restricted to one of the constellations below. |
+| platform           | string     | **REQUIRED.** Globally unique satellite identifier as defined in common metadata, but restricted to the patterns listed below. |
+| instruments        | \[string\] | The instrument identifier as defined in common metadata, but restricted to those listed below. |
+| datetime           | string     | **REQUIRED**. The acquisition time As defined in common metadata and STAC. |
+| gsd                | number     | Ground sample distance as defined in common metadata. |
+| eo:cloud_cover     | number     | Cloud cover as defined in the EO extension. |
+| eo:snow_cover      | number     | Snow/ice cover as defined in the EO extension. |
+| view:azimuth       | number     | Time of publication as defined in the Viewing Angles extension. |
+| view:off_nadir     | number     | **REQUIRED**. The satellite's across-track, off-nadir viewing angle. |
+| view:sun_azimuth   | number     | **REQUIRED**. Time of publication as defined in the Viewing Angles extension. |
+| view:sun_elevation | number     | **REQUIRED**. Time of publication as defined in the Viewing Angles extension. |
+
+**Additional REQUIRED fields per `pl:item_type`:**
+
+| Field Name     | PSOrthoTile | PSScene | REOrthoTile | REScene | SkySatCollect | SkySatScene | SkySatVideo |
+| -------------- | ----------- | ------- | ----------- | ------- | ------------- | ----------- | ----------- |
+| instruments    | ✓ | ✓ |   |   |   |   |   |
+| gsd            | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |   |
+| eo:cloud_cover | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |   |
+| eo:snow_cover  |   | ✓ |   |   | ✓ | ✓ |   |
+| view:azimuth   | ✓ | ✓ |   |   | ✓ | ✓ | ✓ |
+
+#### constellation
+
+The following values exist for the Planet Labs satellites:
+
+- PlanetScope: `planetscope`
+- RapidEye: `rapideye`
+- SkySat: `skysat`
+
+#### platform
+
+The following patterns are allowed for the Planet Labs satellites:
+
+- PlanetScope: `[0-9a-f]{2,}` (e.g. `0c08`, `227c`, etc.)
+- RapidEye: `RapidEye-\d+` (e.g. `RapidEye-1`, `RapidEye-2`, etc.)
+- SkySat: `SSC\\d+` (e.g. `SSC1`, `SSC19`, etc.)
+
+#### instruments
+
+The following values exist for the Planet Labs satellites:
+
+- PlanetScope: `PS2` (Dove Classic), `PS2.SD` (Dove-R), `PSB.SD` (SuperDove)
+- RapidEye: n/a
+- SkySat: n/a
+
+Please note that the `instruments` field is always specified as an array.
+
+#### view:off_nadir
+
+This field is basically the `view_angle` field in the Planet API.
+The values are equal for SkySat and Planetscope, but for RapidEye they can also be negative
+(positive numbers denote east, negative numbers denote west).
+So the `view_angle` as defined by the Planet API maps 1:1 to `view:off_nadir`, but
+**for RapidEye you have to use the absolute value of `view_angle`**.
+
+## Asset Fields
+
+### Planet-specific
+
+The fields in the tables below can be used in these parts of STAC documents:
+- [ ] Catalogs
+- [ ] Collections
+- [ ] Item Properties (incl. Summaries in Collections)
+- [x] Assets (for both Collections and Items, incl. Item Asset Definitions in Collections)
+- [ ] Links
+
+| Field Name     | Type   | Description |
+| -------------- | ------ | ----------- |
+| pl:asset_type  | string | The type of asset. |
+| pl:bundle_type | string | The type of bundle the asset belongs to. |
+
+### pl:asset_type
+
+These asset types are specific to Planet and may lead to additional requirements in the future.
+
+The allowed asset types can be found here per item type:
+
+- PlanetScope:
+  - [`PSOrthoTile`](https://developers.planet.com/docs/data/psorthotile/#available-asset-types)
+  - [`PSScene`](https://developers.planet.com/docs/data/psscene/#available-asset-types)
+- RapidEye:
+  - [`REOrthoTile`](https://developers.planet.com/docs/data/reorthotile/#available-asset-types)
+  - [`REScene`](https://developers.planet.com/docs/data/rescene/#available-asset-types)
+- SkySat:
+  - [`SkySatCollect`](https://developers.planet.com/docs/data/skysatcollect/#available-asset-types)
+  - [`SkySatScene`](https://developers.planet.com/docs/data/skysatscene/#available-asset-types)
+  - [`SkySatVideo`](https://developers.planet.com/docs/data/skysatvideo/#available-asset-types)
+
+The [JSON Schema](./json-schema/schema.json) also provides a full list of all allowed values.
+
+### Other Extensions and Specifications
+
+Additionally, this extension uses and partially requires additional fields from other specifications/ extensions.
+The following specifications are relevant here:
+- [STAC Common Metadata](https://github.com/radiantearth/stac-spec/blob/master/item-spec/common-metadata.md)
+- [STAC Projection Extension](https://github.com/stac-extensions/projection) (v1.1.0 or later)
+- [STAC Raster Extension](https://github.com/stac-extensions/raster) (v1.0.0 or later)
+- [STAC Timestamps Extension](https://github.com/stac-extensions/timestamps) (v1.1.0 or later)
+
+| Field Name   | Type        | Description |
+| ------------ | ----------- | ----------- |
+| updated      | string      | **REQUIRED**. Time of data publication as defined in common metadata. |
+| published    | string      | **REQUIRED**. Time of data publication as defined in the Timestamps extension. |
+| proj:espg    | integer     | The EPSG code as defined in the Projection extension. |
+| proj:shape   | \[integer\] | The number of rows and cols in the image as defined in the Projection extension. |
+| raster:bands | \[[Raster Band Object](https://github.com/stac-extensions/raster#raster-band-object)] | The bands of the file with a `spatial_resolution`. |
+
+These fields should only be provided for actual data files (e.g. COG), not for metadata (e.g. XML).
+Currently, the JSON Schema does not fully validate these fields.
+
+The fields defined in the [Projection extension](https://github.com/stac-extensions/projection#fields)
+can either be used at the Asset-level or go into the Item Properties.
+To avoid ambiguities it is recommended to have them at the Asset-level, but both is allowed.
+
+**Additional REQUIRED fields per `pl:item_type`:**
+
+| Field Name                           | PSOrthoTile | PSScene | REOrthoTile | REScene | SkySatCollect | SkySatScene | SkySatVideo |
+| ------------------------------------ | ----------- | ------- | ----------- | ------- | ------------- | ----------- | ----------- |
+| proj:epsg                            | ✓ |   | ✓ |   |   |   |   |
+| proj.shape                           | ✓ | ✓ | ✓ | ✓ |   |   |   |
+| raster:bands\[\*].spatial_resolution | ✓ | ✓ | ✓ |   | ✓ | ✓ |   |
+
+*Note: These requirements are not enforced in the JSON Schema yet.*
+
+## Providers
+
+For the `providers` field in a STAC Collection (or in the STAC Item Properties), it is recommended
+to provide the following details for Planet:
+
+- Name: `Planet Labs PBC`
+- Roles: at least `producer` and `licensor`
+
+## Contributing
+
+All contributions are subject to the
+[STAC Specification Code of Conduct](https://github.com/radiantearth/stac-spec/blob/master/CODE_OF_CONDUCT.md).
+For contributions, please follow the
+[STAC specification contributing guide](https://github.com/radiantearth/stac-spec/blob/master/CONTRIBUTING.md) Instructions
+for running tests are copied here for convenience.
+
+### Running tests
+
+The same checks that run as checks on PR's are part of the repository and can be run locally to verify that changes are valid. 
+To run tests locally, you'll need `npm`, which is a standard part of any [node.js installation](https://nodejs.org/en/download/).
+
+First you'll need to install everything with npm once. Just navigate to the root of this repository and on 
+your command line run:
+```bash
+npm install
+```
+
+Then to check markdown formatting and test the examples against the JSON schema, you can run:
+```bash
+npm test
+```
+
+This will spit out the same texts that you see online, and you can then go and fix your markdown or examples.
+
+If the tests reveal formatting problems with the examples, you can fix them with:
+```bash
+npm run format-examples
+```

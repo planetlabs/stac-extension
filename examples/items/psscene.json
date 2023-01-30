@@ -1,0 +1,311 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "id": "20210129_075502_95_2223",
+  "properties": {
+    "updated": "2021-01-30T05:14:36Z",
+    "created": "2021-01-30T02:00:58Z",
+    "gsd": 3.8,
+    "constellation": "planetscope",
+    "platform": "2223",
+    "instruments": [
+      "PSB.SD"
+    ],
+    "eo:cloud_cover": 30,
+    "eo:snow_cover": 0,
+    "view:off_nadir": 2,
+    "view:azimuth": 94.3,
+    "view:sun_azimuth": 94.4,
+    "view:sun_elevation": 50.7,
+    "proj:epsg": 32734,
+    "proj:bbox": [
+      686532,
+      7829016,
+      686679,
+      7829301
+    ],
+    "proj:shape": [
+      95,
+      49
+    ],
+    "proj:transform": [
+      3,
+      0,
+      686532,
+      0,
+      -3,
+      7829301,
+      0,
+      0,
+      1
+    ],
+    "pl:item_type": "PSScene",
+    "pl:strip_id": "4111711",
+    "pl:clear_percent": 12.34,
+    "pl:ground_control": true,
+    "pl:publishing_stage": "finalized",
+    "pl:quality_category": "test",
+    "pl:pixel_resolution": 3,
+    "published": "2021-01-30T02:00:58Z",
+    "datetime": "2021-01-29T07:55:02.953725Z"
+  },
+  "geometry": {
+    "coordinates": [
+      [
+        [
+          22.64947031682945,
+          -19.573081872726625
+        ],
+        [
+          22.610797919599992,
+          -19.753049882240187
+        ],
+        [
+          22.92860886856357,
+          -19.813524238713256
+        ],
+        [
+          22.966700517051756,
+          -19.634371785363914
+        ],
+        [
+          22.64947031682945,
+          -19.573081872726625
+        ]
+      ]
+    ],
+    "type": "Polygon"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json"
+    }
+  ],
+  "assets": {
+    "20210129_075502_95_2223_3B_AnalyticMS_clip_tif": {
+      "href": "./20210129_075502_95_2223_3B_AnalyticMS_clip.tif",
+      "type": "image/tiff",
+      "pl:asset_type": "analytic",
+      "pl:bundle_type": "analytic",
+      "raster:bands": [
+        {
+          "nodata": 0,
+          "data_type": "uint16",
+          "spatial_resolution": 3,
+          "statistics": {
+            "minimum": 3690,
+            "maximum": 4774
+          },
+          "scale": 0.0000200015317019
+        },
+        {
+          "nodata": 0,
+          "data_type": "uint16",
+          "spatial_resolution": 3,
+          "statistics": {
+            "minimum": 2509,
+            "maximum": 3957
+          },
+          "scale": 0.0000216932146323
+        },
+        {
+          "nodata": 0,
+          "data_type": "uint16",
+          "spatial_resolution": 3,
+          "statistics": {
+            "minimum": 1522,
+            "maximum": 2629
+          },
+          "scale": 0.0000261107788024
+        },
+        {
+          "nodata": 0,
+          "data_type": "uint16",
+          "spatial_resolution": 3,
+          "statistics": {
+            "minimum": 1472,
+            "maximum": 5035
+          },
+          "scale": 0.0000413267975929
+        }
+      ],
+      "eo:bands": [
+        {
+          "name": "Blue",
+          "common_name": "blue",
+          "center_wavelength": 490,
+          "full_width_half_max": 50
+        },
+        {
+          "name": "Green II",
+          "common_name": "green",
+          "center_wavelength": 565,
+          "full_width_half_max": 46
+        },
+        {
+          "name": "Red",
+          "common_name": "red",
+          "center_wavelength": 665,
+          "full_width_half_max": 31
+        },
+        {
+          "name": "NIR",
+          "common_name": "nir",
+          "center_wavelength": 865,
+          "full_width_half_max": 40
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "20210129_075502_95_2223_metadata_json": {
+      "href": "./20210129_075502_95_2223_metadata.json",
+      "type": "application/json",
+      "roles": [
+        "metadata"
+      ]
+    },
+    "20210129_075502_95_2223_3B_udm2_clip_tif": {
+      "href": "./20210129_075502_95_2223_3B_udm2_clip.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "pl:asset_type": "udm",
+      "pl:bundle_type": "analytic",
+      "raster:bands": [
+        {
+          "data_type": "uint8",
+          "spatial_resolution": 3,
+          "statistics": {
+            "minimum": 0,
+            "maximum": 1
+          }
+        },
+        {
+          "data_type": "uint8",
+          "spatial_resolution": 3,
+          "statistics": {
+            "minimum": 0,
+            "maximum": 0
+          }
+        },
+        {
+          "data_type": "uint8",
+          "spatial_resolution": 3,
+          "statistics": {
+            "minimum": 0,
+            "maximum": 0
+          }
+        },
+        {
+          "data_type": "uint8",
+          "spatial_resolution": 3,
+          "statistics": {
+            "minimum": 0,
+            "maximum": 0
+          }
+        },
+        {
+          "data_type": "uint8",
+          "spatial_resolution": 3,
+          "statistics": {
+            "minimum": 0,
+            "maximum": 0
+          }
+        },
+        {
+          "data_type": "uint8",
+          "spatial_resolution": 3,
+          "statistics": {
+            "minimum": 0,
+            "maximum": 0
+          }
+        },
+        {
+          "data_type": "uint8",
+          "spatial_resolution": 3,
+          "statistics": {
+            "minimum": 0,
+            "maximum": 65
+          }
+        },
+        {
+          "data_type": "uint8",
+          "spatial_resolution": 3,
+          "statistics": {
+            "minimum": 0,
+            "maximum": 1
+          }
+        }
+      ],
+      "eo:bands": [
+        {
+          "name": "B1",
+          "description": "Clear map (0: not clear, 1: clear)"
+        },
+        {
+          "name": "B2",
+          "description": "Snow map (0: no snow or ice, 1: snow or ice)"
+        },
+        {
+          "name": "B3",
+          "description": "Shadow map (0: no shadow, 1: shadow)"
+        },
+        {
+          "name": "B4",
+          "description": "Light haze map (0: no light haze, 1: light haze)"
+        },
+        {
+          "name": "B5",
+          "description": "Heavy haze map (0: no heavy haze, 1: heavy haze)"
+        },
+        {
+          "name": "B6",
+          "description": "Cloud map (0: no cloud, 1: cloud)"
+        },
+        {
+          "name": "B7",
+          "description": "Confidence map (percentage value: per-pixel algorithmic confidence in classification)"
+        },
+        {
+          "name": "B8",
+          "description": "Unusable pixels"
+        }
+      ],
+      "roles": [
+        "data",
+        "snow-ice",
+        "cloud",
+        "cloud-shadow"
+      ]
+    },
+    "20210129_075502_95_2223_3B_AnalyticMS_metadata_clip_xml": {
+      "href": "./20210129_075502_95_2223_3B_AnalyticMS_metadata_clip.xml",
+      "type": "text/xml",
+      "pl:asset_type": "analytic_xml",
+      "pl:bundle_type": "analytic",
+      "roles": [
+        "metadata"
+      ]
+    }
+  },
+  "bbox": [
+    22.610797919599992,
+    -19.813524238713256,
+    22.966700517051756,
+    -19.573081872726625
+  ],
+  "stac_extensions": [
+    "https://planetlabs.github.io/stac-extension/v1.0.0-beta.1/schema.json",
+    "https://stac-extensions.github.io/eo/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/view/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ]
+}

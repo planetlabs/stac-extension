@@ -1,0 +1,168 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "id": "20221003_011846_ssc2d3_0010",
+  "properties": {
+    "updated": "2022-10-04T05:51:24Z",
+    "created": "2022-10-03T01:55:34Z",
+    "gsd": 0.79,
+    "constellation": "skysat",
+    "platform": "SSC2",
+    "eo:cloud_cover": 0,
+    "eo:snow_cover": 0,
+    "view:off_nadir": 27.3,
+    "view:azimuth": 150,
+    "view:sun_azimuth": 139.9,
+    "view:sun_elevation": 44.5,
+    "proj:epsg": 32652,
+    "pl:clear_percent": 100,
+    "pl:ground_control": true,
+    "pl:item_type": "SkySatScene",
+    "pl:pixel_resolution": 0.5,
+    "pl:publishing_stage": "finalized",
+    "pl:quality_category": "standard",
+    "pl:strip_id": "s4_20221003T011846Z",
+    "published": "2022-10-03T01:55:34Z",
+    "datetime": "2022-10-03T01:18:46.562000Z"
+  },
+  "geometry": {
+    "coordinates": [
+      [
+        [
+          130.1615405634544,
+          33.561650964134216
+        ],
+        [
+          130.16170705400583,
+          33.55166011349766
+        ],
+        [
+          130.1883942956736,
+          33.54904166464046
+        ],
+        [
+          130.18814910997446,
+          33.5591812131352
+        ],
+        [
+          130.1615405634544,
+          33.561650964134216
+        ]
+      ]
+    ],
+    "type": "Polygon"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json"
+    }
+  ],
+  "assets": {
+    "20221003_011846_ssc2d3_0010_metadata_json": {
+      "href": "./20221003_011846_ssc2d3_0010_metadata.json",
+      "type": "application/json",
+      "roles": [
+        "metadata"
+      ]
+    },
+    "20221003_011846_ssc2d3_0010_visual_tif": {
+      "href": "./20221003_011846_ssc2d3_0010_visual.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "pl:asset_type": "ortho_visual",
+      "pl:bundle_type": "visual",
+      "proj:shape": [
+        2741,
+        5019
+      ],
+      "proj:transform": [
+        0.5,
+        0,
+        607816,
+        0,
+        -0.5,
+        3714159,
+        0,
+        0,
+        1
+      ],
+      "raster:bands": [
+        {
+          "data_type": "uint8",
+          "spatial_resolution": 0.5,
+          "statistics": {
+            "minimum": 23,
+            "maximum": 255
+          }
+        },
+        {
+          "data_type": "uint8",
+          "spatial_resolution": 0.5,
+          "statistics": {
+            "minimum": 1,
+            "maximum": 255
+          }
+        },
+        {
+          "data_type": "uint8",
+          "spatial_resolution": 0.5,
+          "statistics": {
+            "minimum": 0,
+            "maximum": 255
+          }
+        },
+        {
+          "data_type": "uint8",
+          "spatial_resolution": 0.5,
+          "statistics": {
+            "minimum": 0,
+            "maximum": 255
+          }
+        }
+      ],
+      "eo:bands": [
+        {
+          "name": "RED",
+          "common_name": "red",
+          "center_wavelength": 645,
+          "full_width_half_max": 90
+        },
+        {
+          "name": "GREEN",
+          "common_name": "green",
+          "center_wavelength": 560,
+          "full_width_half_max": 80
+        },
+        {
+          "name": "BLUE",
+          "common_name": "blue",
+          "center_wavelength": 470,
+          "full_width_half_max": 70
+        }
+      ],
+      "roles": [
+        "data",
+        "visual"
+      ]
+    }
+  },
+  "bbox": [
+    130.1615405634544,
+    33.54904166464046,
+    130.1883942956736,
+    33.561650964134216
+  ],
+  "stac_extensions": [
+    "https://planetlabs.github.io/stac-extension/v1.0.0-beta.1/schema.json",
+    "https://stac-extensions.github.io/eo/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/view/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ]
+}

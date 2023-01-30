@@ -1,0 +1,350 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "id": "2019-04-04T015035_RE2",
+  "properties": {
+    "updated": "2019-04-04T07:20:30Z",
+    "created": "2019-04-04T07:20:30Z",
+    "gsd": 6.5,
+    "constellation": "rapideye",
+    "platform": "RapidEye-2",
+    "eo:cloud_cover": 1.51,
+    "view:off_nadir": 6.8046,
+    "view:sun_azimuth": 136.7220454054,
+    "view:sun_elevation": 54.9498191892,
+    "proj:epsg": 4326,
+    "pl:black_fill": 0,
+    "pl:item_type": "REScene",
+    "pl:strip_id": "39196892",
+    "published": "2019-04-04T07:20:30Z",
+    "datetime": "2019-04-04T01:50:35.246377Z"
+  },
+  "geometry": {
+    "coordinates": [
+      [
+        [
+          129.5909850476811,
+          34.10129815805231
+        ],
+        [
+          129.43452116887462,
+          33.47311536506405
+        ],
+        [
+          130.25694267464985,
+          33.36622403271104
+        ],
+        [
+          130.41935708731222,
+          33.99373268894638
+        ],
+        [
+          129.5909850476811,
+          34.10129815805231
+        ]
+      ]
+    ],
+    "type": "Polygon"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json"
+    }
+  ],
+  "assets": {
+    "2019-04-04T015035_RE2_metadata_json": {
+      "href": "./2019-04-04T015035_RE2_metadata.json",
+      "type": "application/json",
+      "roles": [
+        "metadata"
+      ]
+    },
+    "2019-04-04T015035_RE2_1B_Quicklook_tif": {
+      "href": "./2019-04-04T015035_RE2_1B_Quicklook.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "pl:asset_type": "browse",
+      "pl:bundle_type": "basic_analytic",
+      "raster:bands": [
+        {
+          "data_type": "uint8",
+          "spatial_resolution": 0.000431189,
+          "statistics": {
+            "minimum": 0,
+            "maximum": 255
+          }
+        },
+        {
+          "data_type": "uint8",
+          "spatial_resolution": 0.000431189,
+          "statistics": {
+            "minimum": 0,
+            "maximum": 255
+          }
+        },
+        {
+          "data_type": "uint8",
+          "spatial_resolution": 0.000431189,
+          "statistics": {
+            "minimum": 0,
+            "maximum": 241
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "2019-04-04T015035_RE2_1B_band1_tif": {
+      "href": "./2019-04-04T015035_RE2_1B_band1.tif",
+      "type": "image/tiff",
+      "pl:asset_type": "basic_analytic_b1",
+      "pl:bundle_type": "basic_analytic",
+      "proj:shape": [
+        1705,
+        2284
+      ],
+      "proj:transform": [
+        0.000431189,
+        0,
+        129.43452116887462,
+        0,
+        -0.000431189,
+        34.10129815805231,
+        0,
+        0,
+        1
+      ],
+      "raster:bands": [
+        {
+          "data_type": "uint16",
+          "spatial_resolution": 1,
+          "statistics": {
+            "minimum": 964,
+            "maximum": 65535
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "2019-04-04T015035_RE2_1B_band2_tif": {
+      "href": "./2019-04-04T015035_RE2_1B_band2.tif",
+      "type": "image/tiff",
+      "pl:asset_type": "basic_analytic_b2",
+      "pl:bundle_type": "basic_analytic",
+      "proj:shape": [
+        1705,
+        2284
+      ],
+      "proj:transform": [
+        0.000431189,
+        0,
+        129.43452116887462,
+        0,
+        -0.000431189,
+        34.10129815805231,
+        0,
+        0,
+        1
+      ],
+      "raster:bands": [
+        {
+          "data_type": "uint16",
+          "spatial_resolution": 1,
+          "statistics": {
+            "minimum": 1,
+            "maximum": 65535
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "2019-04-04T015035_RE2_1B_band3_tif": {
+      "href": "./2019-04-04T015035_RE2_1B_band3.tif",
+      "type": "image/tiff",
+      "pl:asset_type": "basic_analytic_b3",
+      "pl:bundle_type": "basic_analytic",
+      "proj:shape": [
+        1705,
+        2284
+      ],
+      "proj:transform": [
+        0.000431189,
+        0,
+        129.43452116887462,
+        0,
+        -0.000431189,
+        34.10129815805231,
+        0,
+        0,
+        1
+      ],
+      "raster:bands": [
+        {
+          "data_type": "uint16",
+          "spatial_resolution": 1,
+          "statistics": {
+            "minimum": 1,
+            "maximum": 65535
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "2019-04-04T015035_RE2_1B_band4_tif": {
+      "href": "./2019-04-04T015035_RE2_1B_band4.tif",
+      "type": "image/tiff",
+      "pl:asset_type": "basic_analytic_b4",
+      "pl:bundle_type": "basic_analytic",
+      "proj:shape": [
+        1705,
+        2284
+      ],
+      "proj:transform": [
+        0.000431189,
+        0,
+        129.43452116887462,
+        0,
+        -0.000431189,
+        34.10129815805231,
+        0,
+        0,
+        1
+      ],
+      "raster:bands": [
+        {
+          "data_type": "uint16",
+          "spatial_resolution": 1,
+          "statistics": {
+            "minimum": 1,
+            "maximum": 65491
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "2019-04-04T015035_RE2_1B_band5_tif": {
+      "href": "./2019-04-04T015035_RE2_1B_band5.tif",
+      "type": "image/tiff",
+      "pl:asset_type": "basic_analytic_b5",
+      "pl:bundle_type": "basic_analytic",
+      "proj:shape": [
+        1705,
+        2284
+      ],
+      "proj:transform": [
+        0.000431189,
+        0,
+        129.43452116887462,
+        0,
+        -0.000431189,
+        34.10129815805231,
+        0,
+        0,
+        1
+      ],
+      "raster:bands": [
+        {
+          "data_type": "uint16",
+          "spatial_resolution": 1,
+          "statistics": {
+            "minimum": 393,
+            "maximum": 49526
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "2019-04-04T015035_RE2_1B_metadata_xml": {
+      "href": "./2019-04-04T015035_RE2_1B_metadata.xml",
+      "type": "text/xml",
+      "pl:asset_type": "basic_analytic_xml",
+      "pl:bundle_type": "basic_analytic",
+      "roles": [
+        "metadata"
+      ]
+    },
+    "2019-04-04T015035_RE2_1B_rpc_xml": {
+      "href": "./2019-04-04T015035_RE2_1B_rpc.xml",
+      "type": "text/xml",
+      "pl:asset_type": "basic_analytic_rpc",
+      "pl:bundle_type": "basic_analytic",
+      "roles": [
+        "metadata"
+      ]
+    },
+    "2019-04-04T015035_RE2_1B_sci_xml": {
+      "href": "./2019-04-04T015035_RE2_1B_sci.xml",
+      "type": "text/plain",
+      "pl:asset_type": "basic_analytic_sci",
+      "pl:bundle_type": "basic_analytic",
+      "roles": []
+    },
+    "2019-04-04T015035_RE2_1B_udm_tif": {
+      "href": "./2019-04-04T015035_RE2_1B_udm.tif",
+      "type": "image/tiff",
+      "pl:asset_type": "basic_udm",
+      "pl:bundle_type": "basic_analytic",
+      "proj:shape": [
+        1705,
+        2284
+      ],
+      "proj:transform": [
+        0.000431189,
+        0,
+        129.43452116887462,
+        0,
+        -0.000431189,
+        34.10129815805231,
+        0,
+        0,
+        1
+      ],
+      "raster:bands": [
+        {
+          "data_type": "uint8",
+          "spatial_resolution": 1,
+          "statistics": {
+            "minimum": 0,
+            "maximum": 2
+          }
+        }
+      ],
+      "roles": [
+        "data",
+        "snow-ice",
+        "cloud",
+        "cloud-shadow"
+      ]
+    }
+  },
+  "bbox": [
+    129.43452116887462,
+    33.36622403271104,
+    130.41935708731222,
+    34.10129815805231
+  ],
+  "stac_extensions": [
+    "https://planetlabs.github.io/stac-extension/v1.0.0-beta.1/schema.json",
+    "https://stac-extensions.github.io/eo/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/view/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ]
+}

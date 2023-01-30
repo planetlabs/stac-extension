@@ -1,0 +1,54 @@
+{
+  "stac_version": "1.0.0",
+  "id": "planet-extension-examples",
+  "type": "Catalog",
+  "title": "Planet Extension Examples",
+  "description": "Examples for the Planet Labs STAC Extension",
+  "providers": [
+    {
+      "name": "Planet Labs PBC",
+      "url": "https://www.planet.com",
+      "roles": [
+        "licensor",
+        "producer"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "href": "https://raw.githubusercontent.com/planetlabs/stac-extension/main/examples/catalog.json",
+      "rel": "self",
+      "type": "application/json"
+    },
+    {
+      "href": "./items/psscene.json",
+      "rel": "item",
+      "type": "application/geo+json"
+    },
+    {
+      "href": "./items/psorthotile.json",
+      "rel": "item",
+      "type": "application/geo+json"
+    },
+    {
+      "href": "./items/reorthotile.json",
+      "rel": "item",
+      "type": "application/geo+json"
+    },
+    {
+      "href": "./items/rescene.json",
+      "rel": "item",
+      "type": "application/geo+json"
+    },
+    {
+      "href": "./items/skysatcollect.json",
+      "rel": "item",
+      "type": "application/geo+json"
+    },
+    {
+      "href": "./items/skysatscene.json",
+      "rel": "item",
+      "type": "application/geo+json"
+    }
+  ]
+}

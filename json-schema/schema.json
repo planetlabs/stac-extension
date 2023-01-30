@@ -1,0 +1,752 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://planetlabs.github.io/stac-extension/v1.0.0-beta.1/schema.json#",
+  "title": "Planet Labs Extension",
+  "description": "STAC Planet Labs Extension for STAC Items and STAC Collections. Validates the fields, doesn't require specific assets to be present.",
+  "type": "object",
+  "required": [
+    "stac_extensions",
+    "type"
+  ],
+  "properties": {
+    "stac_extensions": {
+      "type": "array",
+      "contains": {
+        "const": "https://planetlabs.github.io/stac-extension/v1.0.0-beta.1/schema.json"
+      }
+    }
+  },
+  "allOf": [
+    {
+      "$comment": "This is the schema for STAC Items.",
+      "if": {
+        "$ref": "#/definitions/is_stac_item"
+      },
+      "then": {
+        "required": [
+          "properties",
+          "assets"
+        ],
+        "properties": {
+          "properties": {
+            "type": "object",
+            "required": [
+              "pl:item_type",
+              "pl:strip_id",
+              "constellation",
+              "platform",
+              "datetime",
+              "view:off_nadir",
+              "view:sun_azimuth",
+              "view:sun_elevation"
+            ],
+            "allOf": [
+              {
+                "title": "PSOrthoTile",
+                "if": {
+                  "$ref": "#/definitions/types/PSOrthoTile"
+                },
+                "then": {
+                  "required": [
+                    "pl:black_fill",
+                    "pl:clear_percent",
+                    "pl:grid_cell",
+                    "pl:ground_control",
+                    "pl:pixel_resolution",
+                    "pl:publishing_stage",
+                    "pl:quality_category",
+                    "instruments",
+                    "gsd",
+                    "eo:cloud_cover",
+                    "view:azimuth"
+                  ],
+                  "properties": {
+                    "pl:item_type": {
+                      "$ref": "#/definitions/fields/pl:item_type"
+                    },
+                    "pl:strip_id": {
+                      "$ref": "#/definitions/fields/pl:strip_id"
+                    },
+                    "pl:black_fill": {
+                      "$ref": "#/definitions/fields/pl:black_fill"
+                    },
+                    "pl:clear_percent": {
+                      "$ref": "#/definitions/fields/pl:clear_percent"
+                    },
+                    "pl:grid_cell": {
+                      "$ref": "#/definitions/fields/pl:grid_cell"
+                    },
+                    "pl:ground_control": {
+                      "$ref": "#/definitions/fields/pl:ground_control"
+                    },
+                    "pl:pixel_resolution": {
+                      "$ref": "#/definitions/fields/pl:pixel_resolution"
+                    },
+                    "pl:publishing_stage": {
+                      "$ref": "#/definitions/fields/pl:publishing_stage"
+                    },
+                    "pl:quality_category": {
+                      "$ref": "#/definitions/fields/pl:quality_category"
+                    }
+                  },
+                  "allOf": [
+                    {
+                      "$ref": "#/definitions/properties/common_metadata/ps"
+                    }
+                  ]
+                },
+                "else": {
+                  "not": {
+                    "$ref": "#/definitions/types/PSOrthoTile"
+                  }
+                }
+              },
+              {
+                "title": "PSScene",
+                "if": {
+                  "$ref": "#/definitions/types/PSScene"
+                },
+                "then": {
+                  "required": [
+                    "pl:clear_percent",
+                    "pl:ground_control",
+                    "pl:pixel_resolution",
+                    "pl:publishing_stage",
+                    "pl:quality_category",
+                    "instruments",
+                    "gsd",
+                    "eo:cloud_cover",
+                    "eo:snow_cover",
+                    "view:azimuth"
+                  ],
+                  "properties": {
+                    "pl:item_type": {
+                      "$ref": "#/definitions/fields/pl:item_type"
+                    },
+                    "pl:strip_id": {
+                      "$ref": "#/definitions/fields/pl:strip_id"
+                    },
+                    "pl:clear_percent": {
+                      "$ref": "#/definitions/fields/pl:clear_percent"
+                    },
+                    "pl:ground_control": {
+                      "$ref": "#/definitions/fields/pl:ground_control"
+                    },
+                    "pl:pixel_resolution": {
+                      "$ref": "#/definitions/fields/pl:pixel_resolution"
+                    },
+                    "pl:publishing_stage": {
+                      "$ref": "#/definitions/fields/pl:publishing_stage"
+                    },
+                    "pl:quality_category": {
+                      "$ref": "#/definitions/fields/pl:quality_category"
+                    }
+                  },
+                  "allOf": [
+                    {
+                      "$ref": "#/definitions/properties/common_metadata/ps"
+                    }
+                  ]
+                },
+                "else": {
+                  "not": {
+                    "$ref": "#/definitions/types/PSScene"
+                  }
+                }
+              },
+              {
+                "title": "REOrthoTile",
+                "if": {
+                  "$ref": "#/definitions/types/REOrthoTile"
+                },
+                "then": {
+                  "required": [
+                    "pl:black_fill",
+                    "pl:grid_cell",
+                    "pl:ground_control",
+                    "pl:pixel_resolution",
+                    "gsd",
+                    "eo:cloud_cover"
+                  ],
+                  "properties": {
+                    "pl:item_type": {
+                      "$ref": "#/definitions/fields/pl:item_type"
+                    },
+                    "pl:strip_id": {
+                      "$ref": "#/definitions/fields/pl:strip_id"
+                    },
+                    "pl:black_fill": {
+                      "$ref": "#/definitions/fields/pl:black_fill"
+                    },
+                    "pl:grid_cell": {
+                      "$ref": "#/definitions/fields/pl:grid_cell"
+                    },
+                    "pl:ground_control": {
+                      "$ref": "#/definitions/fields/pl:ground_control"
+                    },
+                    "pl:pixel_resolution": {
+                      "$ref": "#/definitions/fields/pl:pixel_resolution"
+                    }
+                  },
+                  "allOf": [
+                    {
+                      "$ref": "#/definitions/properties/common_metadata/re"
+                    }
+                  ]
+                },
+                "else": {
+                  "not": {
+                    "$ref": "#/definitions/types/REOrthoTile"
+                  }
+                }
+              },
+              {
+                "title": "REScene",
+                "if": {
+                  "$ref": "#/definitions/types/REScene"
+                },
+                "then": {
+                  "required": [
+                    "pl:black_fill",
+                    "gsd",
+                    "eo:cloud_cover"
+                  ],
+                  "properties": {
+                    "pl:item_type": {
+                      "$ref": "#/definitions/fields/pl:item_type"
+                    },
+                    "pl:strip_id": {
+                      "$ref": "#/definitions/fields/pl:strip_id"
+                    },
+                    "pl:black_fill": {
+                      "$ref": "#/definitions/fields/pl:black_fill"
+                    }
+                  },
+                  "allOf": [
+                    {
+                      "$ref": "#/definitions/properties/common_metadata/re"
+                    }
+                  ]
+                },
+                "else": {
+                  "not": {
+                    "$ref": "#/definitions/types/REScene"
+                  }
+                }
+              },
+              {
+                "title": "SkySatCollect",
+                "if": {
+                  "$ref": "#/definitions/types/SkySatCollect"
+                },
+                "then": {
+                  "required": [
+                    "pl:clear_percent",
+                    "pl:ground_control_ratio",
+                    "pl:pixel_resolution",
+                    "pl:publishing_stage",
+                    "pl:quality_category",
+                    "gsd",
+                    "eo:cloud_cover",
+                    "eo:snow_cover",
+                    "view:azimuth"
+                  ],
+                  "properties": {
+                    "pl:item_type": {
+                      "$ref": "#/definitions/fields/pl:item_type"
+                    },
+                    "pl:strip_id": {
+                      "$ref": "#/definitions/fields/pl:strip_id"
+                    },
+                    "pl:clear_percent": {
+                      "$ref": "#/definitions/fields/pl:clear_percent"
+                    },
+                    "pl:ground_control_ratio": {
+                      "$ref": "#/definitions/fields/pl:ground_control_ratio"
+                    },
+                    "pl:publishing_stage": {
+                      "$ref": "#/definitions/fields/pl:publishing_stage"
+                    },
+                    "pl:quality_category": {
+                      "$ref": "#/definitions/fields/pl:quality_category"
+                    },
+                    "pl:pixel_resolution": {
+                      "$ref": "#/definitions/fields/pl:pixel_resolution"
+                    }
+                  },
+                  "allOf": [
+                    {
+                      "$ref": "#/definitions/properties/common_metadata/ss"
+                    }
+                  ]
+                },
+                "else": {
+                  "not": {
+                    "$ref": "#/definitions/types/SkySatCollect"
+                  }
+                }
+              },
+              {
+                "title": "SkySatScene",
+                "if": {
+                  "$ref": "#/definitions/types/SkySatScene"
+                },
+                "then": {
+                  "required": [
+                    "pl:clear_percent",
+                    "pl:ground_control",
+                    "pl:pixel_resolution",
+                    "pl:publishing_stage",
+                    "pl:quality_category",
+                    "gsd",
+                    "eo:cloud_cover",
+                    "eo:snow_cover",
+                    "view:azimuth"
+                  ],
+                  "properties": {
+                    "pl:item_type": {
+                      "$ref": "#/definitions/fields/pl:item_type"
+                    },
+                    "pl:strip_id": {
+                      "$ref": "#/definitions/fields/pl:strip_id"
+                    },
+                    "pl:clear_percent": {
+                      "$ref": "#/definitions/fields/pl:clear_percent"
+                    },
+                    "pl:ground_control": {
+                      "$ref": "#/definitions/fields/pl:ground_control"
+                    },
+                    "pl:publishing_stage": {
+                      "$ref": "#/definitions/fields/pl:publishing_stage"
+                    },
+                    "pl:quality_category": {
+                      "$ref": "#/definitions/fields/pl:quality_category"
+                    },
+                    "pl:pixel_resolution": {
+                      "$ref": "#/definitions/fields/pl:pixel_resolution"
+                    }
+                  },
+                  "allOf": [
+                    {
+                      "$ref": "#/definitions/properties/common_metadata/ss"
+                    }
+                  ]
+                },
+                "else": {
+                  "not": {
+                    "$ref": "#/definitions/types/SkySatScene"
+                  }
+                }
+              },
+              {
+                "title": "SkySatVideo",
+                "if": {
+                  "$ref": "#/definitions/types/SkySatVideo"
+                },
+                "then": {
+                  "required": [
+                    "pl:publishing_stage",
+                    "pl:quality_category",
+                    "view:azimuth"
+                  ],
+                  "properties": {
+                    "pl:item_type": {
+                      "$ref": "#/definitions/fields/pl:item_type"
+                    },
+                    "pl:strip_id": {
+                      "$ref": "#/definitions/fields/pl:strip_id"
+                    },
+                    "pl:publishing_stage": {
+                      "$ref": "#/definitions/fields/pl:publishing_stage"
+                    },
+                    "pl:quality_category": {
+                      "$ref": "#/definitions/fields/pl:quality_category"
+                    }
+                  },
+                  "allOf": [
+                    {
+                      "$ref": "#/definitions/properties/common_metadata/ss"
+                    }
+                  ]
+                },
+                "else": {
+                  "not": {
+                    "$ref": "#/definitions/types/SkySatVideo"
+                  }
+                }
+              }
+            ]
+          },
+          "assets": {
+            "$ref": "#/definitions/assets"
+          }
+        }
+      },
+      "else": {
+        "$ref": "#/definitions/is_stac_collection"
+      }
+    },
+    {
+      "$comment": "This is the schema for STAC Collections.",
+      "type": "object",
+      "if": {
+        "$ref": "#/definitions/is_stac_collection"
+      },
+      "then": {
+        "anyOf": [
+          {
+            "$comment": "This validates the fields in Collection Assets.",
+            "required": [
+              "assets"
+            ],
+            "properties": {
+              "assets": {
+                "$ref": "#/definitions/assets"
+              }
+            }
+          },
+          {
+            "$comment": "This is the schema for the fields in Item Asset Definitions.",
+            "required": [
+              "item_assets"
+            ],
+            "properties": {
+              "item_assets": {
+                "$ref": "#/definitions/assets"
+              }
+            }
+          },
+          {
+            "$comment": "This is the schema for the fields in Summaries. By default, only checks the existence of the properties, but not the schema of the summaries.",
+            "required": [
+              "summaries"
+            ],
+            "properties": {
+              "summaries": {
+                "$ref": "#/definitions/require_any_field"
+              }
+            }
+          }
+        ]
+      },
+      "else": {
+        "$ref": "#/definitions/is_stac_item"
+      }
+    }
+  ],
+  "definitions": {
+    "is_stac_item": {
+      "properties": {
+        "type": {
+          "const": "Feature"
+        }
+      }
+    },
+    "is_stac_collection": {
+      "properties": {
+        "type": {
+          "const": "Collection"
+        }
+      }
+    },
+    "require_any_field": {
+      "$comment": "Please list all fields here so that we can force the existence of one of them in other parts of the schemas.",
+      "anyOf": [
+        {
+          "required": [
+            "pl:black_fill"
+          ]
+        },
+        {
+          "required": [
+            "pl:clear_percent"
+          ]
+        },
+        {
+          "required": [
+            "pl:grid_cell"
+          ]
+        },
+        {
+          "required": [
+            "pl:ground_control"
+          ]
+        },
+        {
+          "required": [
+            "pl:ground_control_ratio"
+          ]
+        },
+        {
+          "required": [
+            "pl:item_type"
+          ]
+        },
+        {
+          "required": [
+            "pl:pixel_resolution"
+          ]
+        },
+        {
+          "required": [
+            "pl:publishing_stage"
+          ]
+        },
+        {
+          "required": [
+            "pl:quality_category"
+          ]
+        },
+        {
+          "required": [
+            "pl:strip_id"
+          ]
+        }
+      ]
+    },
+    "assets": {
+      "$comment": "Only validates whether the pl: fields in the assets are generally valid, but doesn't check specific asset types or so.",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "pl:asset_type": {
+            "type": "string",
+            "enum": [
+              "analytic",
+              "analytic_5b",
+              "analytic_5b_xml",
+              "analytic_dn",
+              "analytic_dn_xml",
+              "analytic_sr",
+              "analytic_xml",
+              "basic_analytic",
+              "basic_analytic_4b",
+              "basic_analytic_4b_rpc",
+              "basic_analytic_4b_xml",
+              "basic_analytic_8b",
+              "basic_analytic_8b_xml",
+              "basic_analytic_b1",
+              "basic_analytic_b1_nitf",
+              "basic_analytic_b2",
+              "basic_analytic_b2_nitf",
+              "basic_analytic_b3",
+              "basic_analytic_b3_nitf",
+              "basic_analytic_b4",
+              "basic_analytic_b4_nitf",
+              "basic_analytic_b5",
+              "basic_analytic_b5_nitf",
+              "basic_analytic_dn",
+              "basic_analytic_dn_rpc",
+              "basic_analytic_rpc",
+              "basic_analytic_sci",
+              "basic_analytic_udm",
+              "basic_analytic_udm2",
+              "basic_analytic_xml",
+              "basic_analytic_xml_nitf",
+              "basic_l1a_all_frames",
+              "basic_l1a_panchromatic_dn",
+              "basic_l1a_panchromatic_dn_rpc",
+              "basic_panchromatic",
+              "basic_panchromatic_dn",
+              "basic_panchromatic_dn_rpc",
+              "basic_panchromatic_rpc",
+              "basic_panchromatic_udm2",
+              "basic_udm",
+              "basic_udm2",
+              "browse",
+              "ortho_analytic",
+              "ortho_analytic_3b",
+              "ortho_analytic_3b_xml",
+              "ortho_analytic_4b",
+              "ortho_analytic_4b_sr",
+              "ortho_analytic_4b_xml",
+              "ortho_analytic_8b",
+              "ortho_analytic_8b_sr",
+              "ortho_analytic_8b_xml",
+              "ortho_analytic_dn",
+              "ortho_analytic_sr",
+              "ortho_analytic_udm",
+              "ortho_analytic_udm2",
+              "ortho_panchromatic",
+              "ortho_panchromatic_dn",
+              "ortho_panchromatic_udm",
+              "ortho_panchromatic_udm2",
+              "ortho_pansharpened",
+              "ortho_pansharpened_udm",
+              "ortho_pansharpened_udm2",
+              "ortho_udm2",
+              "ortho_visual",
+              "udm",
+              "udm2",
+              "video_file",
+              "video_frames",
+              "video_metadata",
+              "visual",
+              "visual_xml"
+            ]
+          },
+          "pl:bundle_type": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "types": {
+      "PSOrthoTile": {
+        "properties": {
+          "pl:item_type": {
+            "const": "PSOrthoTile"
+          }
+        }
+      },
+      "PSScene": {
+        "properties": {
+          "pl:item_type": {
+            "const": "PSScene"
+          }
+        }
+      },
+      "REOrthoTile": {
+        "properties": {
+          "pl:item_type": {
+            "const": "REOrthoTile"
+          }
+        }
+      },
+      "REScene": {
+        "properties": {
+          "pl:item_type": {
+            "const": "REScene"
+          }
+        }
+      },
+      "SkySatCollect": {
+        "properties": {
+          "pl:item_type": {
+            "const": "SkySatCollect"
+          }
+        }
+      },
+      "SkySatScene": {
+        "properties": {
+          "pl:item_type": {
+            "const": "SkySatScene"
+          }
+        }
+      },
+      "SkySatVideo": {
+        "properties": {
+          "pl:item_type": {
+            "const": "SkySatVideo"
+          }
+        }
+      }
+    },
+    "properties": {
+      "common_metadata": {
+        "ps": {
+          "properties": {
+            "constellation": {
+              "const": "planetscope"
+            },
+            "platform": {
+              "pattern": "[0-9a-f]{4,}"
+            },
+            "instruments": {
+              "minItems": 1,
+              "items": {
+                "enum": [
+                  "PS2",
+                  "PS2.SD",
+                  "PSB.SD"
+                ]
+              }
+            }
+          }
+        },
+        "re": {
+          "properties": {
+            "constellation": {
+              "const": "rapideye"
+            },
+            "platform": {
+              "pattern": "RapidEye-\\d+"
+            }
+          }
+        },
+        "ss": {
+          "properties": {
+            "constellation": {
+              "const": "skysat"
+            },
+            "platform": {
+              "pattern": "SSC\\d+"
+            }
+          }
+        }
+      }
+    },
+    "fields": {
+      "pl:black_fill": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 100
+      },
+      "pl:clear_percent": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 100
+      },
+      "pl:grid_cell": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "pl:ground_control": {
+        "type": "boolean"
+      },
+      "pl:ground_control_ratio": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+      },
+      "pl:item_type": {
+        "type": "string",
+        "enum": [
+          "PSOrthoTile",
+          "PSScene",
+          "PSScene3Band",
+          "PSScene4Band",
+          "REOrthoTile",
+          "REScene",
+          "SkySatCollect",
+          "SkySatScene",
+          "SkySatVideo"
+        ]
+      },
+      "pl:pixel_resolution": {
+        "type": "number",
+        "minimumExclusive": 0
+      },
+      "pl:publishing_stage": {
+        "type": "string",
+        "enum": [
+          "preview",
+          "standard",
+          "finalized"
+        ]
+      },
+      "pl:quality_category": {
+        "type": "string",
+        "enum": [
+          "standard",
+          "test"
+        ]
+      },
+      "pl:strip_id": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  }
+}

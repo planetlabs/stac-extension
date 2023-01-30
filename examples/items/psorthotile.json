@@ -1,0 +1,186 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "id": "6188707_5254519_2023-01-04_227c",
+  "properties": {
+    "updated": "2023-01-05T04:53:37Z",
+    "created": "2023-01-04T09:10:44Z",
+    "gsd": 4,
+    "constellation": "planetscope",
+    "platform": "227c",
+    "instruments": [
+      "PSB.SD"
+    ],
+    "eo:cloud_cover": 4,
+    "view:off_nadir": 5,
+    "view:azimuth": 100.2,
+    "view:sun_azimuth": 154.7,
+    "view:sun_elevation": 29.5,
+    "proj:epsg": 32652,
+    "pl:black_fill": 0.04,
+    "pl:clear_percent": 96,
+    "pl:grid_cell": 5254519,
+    "pl:ground_control": true,
+    "pl:item_type": "PSOrthoTile",
+    "pl:pixel_resolution": 3.125,
+    "pl:publishing_stage": "standard",
+    "pl:quality_category": "standard",
+    "pl:strip_id": "6188707",
+    "published": "2023-01-04T09:10:44Z",
+    "datetime": "2023-01-04T01:46:56.665051Z"
+  },
+  "geometry": {
+    "coordinates": [
+      [
+        [
+          130.18019161665885,
+          33.6200114123297
+        ],
+        [
+          130.29901001213372,
+          33.59921780734454
+        ],
+        [
+          130.29901001213372,
+          33.392031782604406
+        ],
+        [
+          130.02688381435658,
+          33.392031782604406
+        ],
+        [
+          130.02688381435658,
+          33.6200114123297
+        ],
+        [
+          130.18019161665885,
+          33.6200114123297
+        ]
+      ]
+    ],
+    "type": "Polygon"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json"
+    }
+  ],
+  "assets": {
+    "6188707_5254519_2023-01-04_227c_metadata_json": {
+      "href": "./6188707_5254519_2023-01-04_227c_metadata.json",
+      "type": "application/json",
+      "roles": [
+        "metadata"
+      ]
+    },
+    "6188707_5254519_2023-01-04_227c_RGB_Visual_tif": {
+      "href": "./6188707_5254519_2023-01-04_227c_RGB_Visual.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "pl:asset_type": "visual",
+      "pl:bundle_type": "visual",
+      "proj:shape": [
+        8000,
+        8000
+      ],
+      "proj:transform": [
+        3.125,
+        0,
+        595500,
+        0,
+        -3.125,
+        3720500,
+        0,
+        0,
+        1
+      ],
+      "raster:bands": [
+        {
+          "data_type": "uint8",
+          "spatial_resolution": 3.125,
+          "statistics": {
+            "minimum": 1,
+            "maximum": 255
+          }
+        },
+        {
+          "data_type": "uint8",
+          "spatial_resolution": 3.125,
+          "statistics": {
+            "minimum": 1,
+            "maximum": 255
+          }
+        },
+        {
+          "data_type": "uint8",
+          "spatial_resolution": 3.125,
+          "statistics": {
+            "minimum": 1,
+            "maximum": 255
+          }
+        },
+        {
+          "data_type": "uint8",
+          "spatial_resolution": 3.125,
+          "statistics": {
+            "minimum": 0,
+            "maximum": 255
+          }
+        }
+      ],
+      "eo:bands": [
+        {
+          "name": "Red",
+          "common_name": "red",
+          "center_wavelength": 665,
+          "full_width_half_max": 31
+        },
+        {
+          "name": "Green II",
+          "common_name": "green",
+          "center_wavelength": 565,
+          "full_width_half_max": 46
+        },
+        {
+          "name": "Blue",
+          "common_name": "blue",
+          "center_wavelength": 490,
+          "full_width_half_max": 50
+        }
+      ],
+      "roles": [
+        "data",
+        "visual"
+      ]
+    },
+    "6188707_5254519_2023-01-04_227c_RGB_Visual_metadata_xml": {
+      "href": "./6188707_5254519_2023-01-04_227c_RGB_Visual_metadata.xml",
+      "type": "text/xml",
+      "pl:asset_type": "visual_xml",
+      "pl:bundle_type": "visual",
+      "roles": [
+        "metadata",
+        "visual"
+      ]
+    }
+  },
+  "bbox": [
+    130.02688381435658,
+    33.392031782604406,
+    130.29901001213372,
+    33.6200114123297
+  ],
+  "stac_extensions": [
+    "https://planetlabs.github.io/stac-extension/v1.0.0-beta.1/schema.json",
+    "https://stac-extensions.github.io/eo/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/view/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ]
+}

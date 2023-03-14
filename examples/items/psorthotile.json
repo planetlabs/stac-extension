@@ -19,7 +19,7 @@
     "proj:epsg": 32652,
     "pl:black_fill": 0.04,
     "pl:clear_percent": 96,
-    "pl:grid_cell": 5254519,
+    "pl:grid_cell": "5254519",
     "pl:ground_control": true,
     "pl:item_type": "PSOrthoTile",
     "pl:pixel_resolution": 3.125,

@@ -699,8 +699,7 @@
         "maximum": 100
       },
       "pl:grid_cell": {
-        "type": "integer",
-        "minimum": 0
+        "type": "string"
       },
       "pl:ground_control": {
         "type": "boolean"

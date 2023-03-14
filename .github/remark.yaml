@@ -1,4 +1,5 @@
 plugins:
+  - remark-gfm
 # Check links
   - validate-links
 # Apply some recommended defaults for consistency
@@ -11,8 +12,6 @@ plugins:
   - remark-lint-hard-break-spaces
   - remark-lint-blockquote-indentation
   - remark-lint-no-consecutive-blank-lines
-  - - remark-lint-maximum-line-length
-    - 150
 # Code
   - remark-lint-fenced-code-flag
   - remark-lint-fenced-code-marker

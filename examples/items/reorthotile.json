@@ -14,7 +14,7 @@
     "view:sun_elevation": 59.57737,
     "proj:epsg": 32652,
     "pl:black_fill": 0,
-    "pl:grid_cell": 5254519,
+    "pl:grid_cell": "5254519",
     "pl:ground_control": true,
     "pl:item_type": "REOrthoTile",
     "pl:pixel_resolution": 5,

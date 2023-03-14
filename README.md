@@ -62,7 +62,7 @@ The fields in the tables below can be used in these parts of STAC documents:
 | ----------------------- | ------- | ----------- |
 | pl:black_fill           | number  | The percentage of the item containing black fill in the range 0 - 100 (inclusive). |
 | pl:clear_percent        | number  | Percent of clear values in dataset. Percentages must be provided in the range 0 - 100 (inclusive). |
-| pl:grid_cell            | integer | The grid cell identifier of the gridded item. |
+| pl:grid_cell            | string  | The grid cell identifier of the gridded item. |
 | pl:ground_control       | boolean | Positional accuracy of the item. If the item has uncertain positional accuracy, this value will be `false`. |
 | pl:ground_control_ratio | number  | Ratio of individual scenes that are successfully rectified, in the range 0 - 1 (inclusive). Only applies to `SkySatCollect`. |
 | pl:item_type            | string  | **REQUIRED**. Name of the item type. Allowed values: see below |

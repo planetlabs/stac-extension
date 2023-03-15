@@ -69,20 +69,21 @@ The fields in the tables below can be used in these parts of STAC documents:
 | pl:pixel_resolution     | number  | The spatial resolution, in meters. (This is meant to be deprecated in favor of [`spatial_resolution`](https://github.com/radiantearth/stac-spec/issues/1196).) |
 | pl:publishing_stage     | string  | Stage of [publishing for an item](https://developers.planet.com/docs/apis/data/items-assets/#item-publishing-lifecycle). Allowed values: `preview`, `standard`, `finalized`. |
 | pl:quality_category     | string  | Metric for image quality. Allowed values: `standard`, `test`. |
-| pl:strip_id             | string  | **REQUIRED.** The unique identifier of the image stripe that the item came from. |
+| pl:strip_id             | string  | The unique identifier of the image stripe that the item came from. |
 
 **Additional REQUIRED fields per `pl:item_type`:**
 
-| Field Name              | PSOrthoTile | PSScene | REOrthoTile | REScene | SkySatCollect | SkySatScene | SkySatVideo |
-| ----------------------- | ----------- | ------- | ----------- | ------- | ------------- | ----------- | ----------- |
-| pl:black_fill           | ✓ |   | ✓ | ✓ |   |   |   |
-| pl:clear_percent        | ✓ | ✓ |   |   | ✓ | ✓ |   |
-| pl:grid_cell            | ✓ |   | ✓ |   |   |   |   |
-| pl:ground_control       | ✓ | ✓ | ✓ |   |   | ✓ |   |
-| pl:ground_control_ratio |   |   |   |   | ✓ |   |   |
-| pl:pixel_resolution     | ✓ | ✓ | ✓ |   | ✓ | ✓ |   |
-| pl:publishing_stage     | ✓ | ✓ |   |   | ✓ | ✓ | ✓ |
-| pl:quality_category     | ✓ | ✓ |   |   | ✓ | ✓ | ✓ |
+| Field Name              | PSOrthoTile | PSScene | REOrthoTile | REScene | SkySatCollect | SkySatScene | SkySatVideo | Landsat8L1G | M(O/Y)D09G(A/Q) | Sentinel1 | Sentinel2L1C |
+| ----------------------- | ----------- | ------- | ----------- | ------- | ------------- | ----------- | ----------- | ----------- | --------------- | --------- | ------------ |
+| pl:black_fill           | ✓ |   | ✓ | ✓ |   |   |   |   | ✓ | ✓ | ✓ |
+| pl:clear_percent        | ✓ | ✓ |   |   | ✓ | ✓ |   |   |   |   |   |
+| pl:grid_cell            | ✓ |   | ✓ |   |   |   |   |   |   |   |   |
+| pl:ground_control       | ✓ | ✓ | ✓ |   |   | ✓ |   |   |   |   |   |
+| pl:ground_control_ratio |   |   |   |   | ✓ |   |   |   |   |   |   |
+| pl:pixel_resolution     | ✓ | ✓ | ✓ |   | ✓ | ✓ |   | ✓ | ✓ |   | ✓ |
+| pl:publishing_stage     | ✓ | ✓ |   |   | ✓ | ✓ | ✓ |   |   |   |   |
+| pl:quality_category     | ✓ | ✓ |   |   | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| pl:strip_id             | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |   |   |   |   |
 
 #### pl:item_type
 
@@ -98,6 +99,13 @@ The following values exist for the Planet Labs satellites:
   - [`SkySatCollect`](https://developers.planet.com/docs/data/skysatcollect/)
   - [`SkySatScene`](https://developers.planet.com/docs/data/skysatscene/)
   - [`SkySatVideo`](https://developers.planet.com/docs/data/skysatvideo/)
+
+The following item types don't come from Planet satellites, but have some support in Planet APIs:
+
+- [`Landsat8L1G`](https://developers.planet.com/docs/data/landsat-8/)
+- [`MOD09GA`, `MYD09GA`, `MOD09GQ`, `MYD09GQ`](https://developers.planet.com/apis/orders/product-bundles-reference/)
+- [`Sentinel1`](https://developers.planet.com/apis/orders/product-bundles-reference/)
+- [`Sentinel2L1C`](https://developers.planet.com/docs/data/sentinel2l1c/)
 
 ### Other Extensions and Specifications
 
@@ -124,13 +132,13 @@ The following specifications are relevant here:
 
 **Additional REQUIRED fields per `pl:item_type`:**
 
-| Field Name     | PSOrthoTile | PSScene | REOrthoTile | REScene | SkySatCollect | SkySatScene | SkySatVideo |
-| -------------- | ----------- | ------- | ----------- | ------- | ------------- | ----------- | ----------- |
-| instruments    | ✓ | ✓ |   |   |   |   |   |
-| gsd            | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |   |
-| eo:cloud_cover | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |   |
-| eo:snow_cover  |   | ✓ |   |   | ✓ | ✓ |   |
-| view:azimuth   | ✓ | ✓ |   |   | ✓ | ✓ | ✓ |
+| Field Name     | PSOrthoTile | PSScene | REOrthoTile | REScene | SkySatCollect | SkySatScene | SkySatVideo | Landsat8L1G | M(O/Y)D09G(A/Q) | Sentinel1 | Sentinel2L1C |
+| -------------- | ----------- | ------- | ----------- | ------- | ------------- | ----------- | ----------- | ----------- | --------------- | --------- | ------------ |
+| instruments    | ✓ | ✓ |   |   |   |   |   | ✓ | ✓ |   | ✓ |
+| gsd            | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |   | ✓ | ✓ | ✓ | ✓ |
+| eo:cloud_cover | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |   | ✓ | ✓ | ✓ | ✓ |
+| eo:snow_cover  |   | ✓ |   |   | ✓ | ✓ |   |   |   |   |   |
+| view:azimuth   | ✓ | ✓ |   |   | ✓ | ✓ | ✓ |   |   |   |   |
 
 #### constellation
 
@@ -140,6 +148,11 @@ The following values exist for the Planet Labs satellites:
 - RapidEye: `rapideye`
 - SkySat: `skysat`
 
+For non Planet Satellites:
+
+- Landsat8/MODIS: `usgs`
+- Sentinel: `esa`
+
 #### platform
 
 The following patterns are allowed for the Planet Labs satellites:
@@ -148,6 +161,12 @@ The following patterns are allowed for the Planet Labs satellites:
 - RapidEye: `RapidEye-\d+` (e.g. `RapidEye-1`, `RapidEye-2`, etc.)
 - SkySat: `SSC\\d+` (e.g. `SSC1`, `SSC19`, etc.)
 
+For non Planet Satellites:
+
+- Landsat8: `Landsat8`
+- MODIS: `Terra`
+- Sentinel: `Sentinel\w+`
+
 #### instruments
 
 The following values exist for the Planet Labs satellites:
@@ -155,6 +174,13 @@ The following values exist for the Planet Labs satellites:
 - PlanetScope: `PS2` (Dove Classic), `PS2.SD` (Dove-R), `PSB.SD` (SuperDove)
 - RapidEye: n/a
 - SkySat: n/a
+  
+For non Planet Satellites:
+
+- Landsat8: `OLI_TIRS`
+- MODIS: `MODIS`
+- Sentinel1: n/a
+- Sentinel2: `MSI`
 
 Please note that the `instruments` field is always specified as an array.
 
@@ -198,6 +224,8 @@ The allowed asset types can be found here per item type:
   - [`SkySatCollect`](https://developers.planet.com/docs/data/skysatcollect/#available-asset-types)
   - [`SkySatScene`](https://developers.planet.com/docs/data/skysatscene/#available-asset-types)
   - [`SkySatVideo`](https://developers.planet.com/docs/data/skysatvideo/#available-asset-types)
+- Landsat, Sentinel, MODIS
+  - These asset types aren't documented as much on the Planet side, but can be explored [here](https://developers.planet.com/apis/orders/product-bundles-reference/) or in the schema
 
 The [JSON Schema](./json-schema/schema.json) also provides a full list of all allowed values.
 
@@ -227,11 +255,11 @@ To avoid ambiguities it is recommended to have them at the Asset-level, but both
 
 **Additional REQUIRED fields per `pl:item_type`:**
 
-| Field Name                           | PSOrthoTile | PSScene | REOrthoTile | REScene | SkySatCollect | SkySatScene | SkySatVideo |
-| ------------------------------------ | ----------- | ------- | ----------- | ------- | ------------- | ----------- | ----------- |
-| proj:epsg                            | ✓ |   | ✓ |   |   |   |   |
-| proj.shape                           | ✓ | ✓ | ✓ | ✓ |   |   |   |
-| raster:bands\[\*].spatial_resolution | ✓ | ✓ | ✓ |   | ✓ | ✓ |   |
+| Field Name                           | PSOrthoTile | PSScene | REOrthoTile | REScene | SkySatCollect | SkySatScene | SkySatVideo | Landsat8L1G | M(O/Y)D09G(A/Q) | Sentinel1 | Sentinel2L1C |
+| ------------------------------------ | ----------- | ------- | ----------- | ------- | ------------- | ----------- | ----------- | ----------- | --------------- | --------- | ------------ |
+| proj:epsg                            | ✓ |   | ✓ |   |   |   |   | ✓ |   | ✓ | ✓ |
+| proj.shape                           | ✓ | ✓ | ✓ | ✓ |   |   |   | ✓ |   | ✓ | ✓ |
+| raster:bands\[\*].spatial_resolution | ✓ | ✓ | ✓ |   | ✓ | ✓ |   | ✓ |   |   | ✓ |
 
 *Note: These requirements are not enforced in the JSON Schema yet.*
 

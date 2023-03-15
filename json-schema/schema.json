@@ -32,7 +32,6 @@
             "type": "object",
             "required": [
               "pl:item_type",
-              "pl:strip_id",
               "constellation",
               "platform",
               "datetime",
@@ -41,6 +40,196 @@
               "view:sun_elevation"
             ],
             "allOf": [
+              {
+                "title": "Landsat8L1G",
+                "if": {
+                  "$ref": "#/definitions/types/Landsat8L1G"
+                },
+                "then": {
+                  "required": [
+                    "pl:pixel_resolution",
+                    "pl:quality_category",
+                    "gsd"
+                  ],
+                  "properties": {
+                    "pl:item_type": {
+                      "$ref": "#/definitions/fields/pl:item_type"
+                    },
+                    "pl:quality_category": {
+                      "$ref": "#/definitions/fields/pl:quality_category"
+                    },
+                    "pl:pixel_resolution": {
+                      "$ref": "#/definitions/fields/pl:pixel_resolution"
+                    }
+                  },
+                  "allOf": [
+                    {
+                      "$ref": "#/definitions/properties/common_metadata/landsat"
+                    }
+                  ]
+                },
+                "else": {
+                  "not": {
+                    "$ref": "#/definitions/types/Landsat8L1G"
+                  }
+                }
+              },
+              {
+                "title": "MOD09GA",
+                "if": {
+                  "$ref": "#/definitions/types/MOD09GA"
+                },
+                "then": {
+                  "required": [
+                    "pl:black_fill",
+                    "pl:pixel_resolution",
+                    "pl:quality_category",
+                    "eo:cloud_cover",
+                    "gsd"
+                  ],
+                  "properties": {
+                    "pl:item_type": {
+                      "$ref": "#/definitions/fields/pl:item_type"
+                    },
+                    "pl:black_fill": {
+                      "$ref": "#/definitions/fields/pl:black_fill"
+                    },
+                    "pl:quality_category": {
+                      "$ref": "#/definitions/fields/pl:quality_category"
+                    },
+                    "pl:pixel_resolution": {
+                      "$ref": "#/definitions/fields/pl:pixel_resolution"
+                    }
+                  },
+                  "allOf": [
+                    {
+                      "$ref": "#/definitions/properties/common_metadata/modis"
+                    }
+                  ]
+                },
+                "else": {
+                  "not": {
+                    "$ref": "#/definitions/types/MOD09GA"
+                  }
+                }
+              },
+              {
+                "title": "MOD09GQ",
+                "if": {
+                  "$ref": "#/definitions/types/MOD09GQ"
+                },
+                "then": {
+                  "required": [
+                    "pl:black_fill",
+                    "pl:pixel_resolution",
+                    "pl:quality_category",
+                    "eo:cloud_cover",
+                    "gsd"
+                  ],
+                  "properties": {
+                    "pl:item_type": {
+                      "$ref": "#/definitions/fields/pl:item_type"
+                    },
+                    "pl:black_fill": {
+                      "$ref": "#/definitions/fields/pl:black_fill"
+                    },
+                    "pl:quality_category": {
+                      "$ref": "#/definitions/fields/pl:quality_category"
+                    },
+                    "pl:pixel_resolution": {
+                      "$ref": "#/definitions/fields/pl:pixel_resolution"
+                    }
+                  },
+                  "allOf": [
+                    {
+                      "$ref": "#/definitions/properties/common_metadata/modis"
+                    }
+                  ]
+                },
+                "else": {
+                  "not": {
+                    "$ref": "#/definitions/types/MOD09GQ"
+                  }
+                }
+              },
+              {
+                "title": "MYD09GA",
+                "if": {
+                  "$ref": "#/definitions/types/MYD09GA"
+                },
+                "then": {
+                  "required": [
+                    "pl:black_fill",
+                    "pl:pixel_resolution",
+                    "pl:quality_category",
+                    "eo:cloud_cover",
+                    "gsd"
+                  ],
+                  "properties": {
+                    "pl:item_type": {
+                      "$ref": "#/definitions/fields/pl:item_type"
+                    },
+                    "pl:black_fill": {
+                      "$ref": "#/definitions/fields/pl:black_fill"
+                    },
+                    "pl:quality_category": {
+                      "$ref": "#/definitions/fields/pl:quality_category"
+                    },
+                    "pl:pixel_resolution": {
+                      "$ref": "#/definitions/fields/pl:pixel_resolution"
+                    }
+                  },
+                  "allOf": [
+                    {
+                      "$ref": "#/definitions/properties/common_metadata/modis"
+                    }
+                  ]
+                },
+                "else": {
+                  "not": {
+                    "$ref": "#/definitions/types/MYD09GA"
+                  }
+                }
+              },
+              {
+                "title": "MYD09GQ",
+                "if": {
+                  "$ref": "#/definitions/types/MYD09GQ"
+                },
+                "then": {
+                  "required": [
+                    "pl:black_fill",
+                    "pl:pixel_resolution",
+                    "pl:quality_category",
+                    "eo:cloud_cover",
+                    "gsd"
+                  ],
+                  "properties": {
+                    "pl:item_type": {
+                      "$ref": "#/definitions/fields/pl:item_type"
+                    },
+                    "pl:black_fill": {
+                      "$ref": "#/definitions/fields/pl:black_fill"
+                    },
+                    "pl:quality_category": {
+                      "$ref": "#/definitions/fields/pl:quality_category"
+                    },
+                    "pl:pixel_resolution": {
+                      "$ref": "#/definitions/fields/pl:pixel_resolution"
+                    }
+                  },
+                  "allOf": [
+                    {
+                      "$ref": "#/definitions/properties/common_metadata/modis"
+                    }
+                  ]
+                },
+                "else": {
+                  "not": {
+                    "$ref": "#/definitions/types/MYD09GQ"
+                  }
+                }
+              },
               {
                 "title": "PSOrthoTile",
                 "if": {
@@ -55,6 +244,7 @@
                     "pl:pixel_resolution",
                     "pl:publishing_stage",
                     "pl:quality_category",
+                    "pl:strip_id",
                     "instruments",
                     "gsd",
                     "eo:cloud_cover",
@@ -113,6 +303,7 @@
                     "pl:pixel_resolution",
                     "pl:publishing_stage",
                     "pl:quality_category",
+                    "pl:strip_id",
                     "instruments",
                     "gsd",
                     "eo:cloud_cover",
@@ -165,6 +356,7 @@
                     "pl:grid_cell",
                     "pl:ground_control",
                     "pl:pixel_resolution",
+                    "pl:strip_id",
                     "gsd",
                     "eo:cloud_cover"
                   ],
@@ -208,6 +400,7 @@
                 "then": {
                   "required": [
                     "pl:black_fill",
+                    "pl:strip_id",
                     "gsd",
                     "eo:cloud_cover"
                   ],
@@ -235,6 +428,84 @@
                 }
               },
               {
+                "title": "Sentinel1",
+                "if": {
+                  "$ref": "#/definitions/types/Sentinel1"
+                },
+                "then": {
+                  "required": [
+                    "pl:black_fill",
+                    "pl:pixel_resolution",
+                    "pl:quality_category",
+                    "eo:cloud_cover",
+                    "gsd"
+                  ],
+                  "properties": {
+                    "pl:item_type": {
+                      "$ref": "#/definitions/fields/pl:item_type"
+                    },
+                    "pl:black_fill": {
+                      "$ref": "#/definitions/fields/pl:black_fill"
+                    },
+                    "pl:quality_category": {
+                      "$ref": "#/definitions/fields/pl:quality_category"
+                    },
+                    "pl:pixel_resolution": {
+                      "$ref": "#/definitions/fields/pl:pixel_resolution"
+                    }
+                  },
+                  "allOf": [
+                    {
+                      "$ref": "#/definitions/properties/common_metadata/sentinel"
+                    }
+                  ]
+                },
+                "else": {
+                  "not": {
+                    "$ref": "#/definitions/types/Sentinel1"
+                  }
+                }
+              },
+              {
+                "title": "Sentinel2L1C",
+                "if": {
+                  "$ref": "#/definitions/types/Sentinel2L1C"
+                },
+                "then": {
+                  "required": [
+                    "pl:black_fill",
+                    "pl:pixel_resolution",
+                    "pl:quality_category",
+                    "eo:cloud_cover",
+                    "gsd"
+                  ],
+                  "properties": {
+                    "pl:item_type": {
+                      "$ref": "#/definitions/fields/pl:item_type"
+                    },
+                    "pl:black_fill": {
+                      "$ref": "#/definitions/fields/pl:black_fill"
+                    },
+                    "pl:quality_category": {
+                      "$ref": "#/definitions/fields/pl:quality_category"
+                    },
+                    "pl:pixel_resolution": {
+                      "$ref": "#/definitions/fields/pl:pixel_resolution"
+                    }
+                  },
+                  "allOf": [
+                    {
+                      "$ref": "#/definitions/properties/common_metadata/sentinel"
+                    }
+                  ]
+                },
+                "else": {
+                  "not": {
+                    "$ref": "#/definitions/types/Sentinel2L1C"
+                  }
+                }
+              },
+              {
                 "title": "SkySatCollect",
                 "if": {
                   "$ref": "#/definitions/types/SkySatCollect"
@@ -246,6 +517,7 @@
                     "pl:pixel_resolution",
                     "pl:publishing_stage",
                     "pl:quality_category",
+                    "pl:strip_id",
                     "gsd",
                     "eo:cloud_cover",
                     "eo:snow_cover",
@@ -298,6 +570,7 @@
                     "pl:pixel_resolution",
                     "pl:publishing_stage",
                     "pl:quality_category",
+                    "pl:strip_id",
                     "gsd",
                     "eo:cloud_cover",
                     "eo:snow_cover",
@@ -347,6 +620,7 @@
                   "required": [
                     "pl:publishing_stage",
                     "pl:quality_category",
+                    "pl:strip_id",
                     "view:azimuth"
                   ],
                   "properties": {
@@ -515,13 +789,56 @@
               "analytic",
               "analytic_5b",
               "analytic_5b_xml",
+              "analytic_8b",
+              "analytic_8b_sr",
+              "analytic_8b_xml",
+              "analytic_b1",
+              "analytic_b10",
+              "analytic_b11",
+              "analytic_b12",
+              "analytic_b2",
+              "analytic_b3",
+              "analytic_b4",
+              "analytic_b5",
+              "analytic_b6",
+              "analytic_b7",
+              "analytic_b8",
+              "analytic_b8a",
+              "analytic_b9",
+              "analytic_bqa",
               "analytic_dn",
               "analytic_dn_xml",
+              "analytic_gflags",
+              "analytic_granule_pnt",
+              "analytic_iobs_res",
+              "analytic_ms",
+              "analytic_num_observations",
+              "analytic_num_observations_1km",
+              "analytic_num_observations_500m",
+              "analytic_obscov",
+              "analytic_obscov_500m",
+              "analytic_orbit_pnt",
+              "analytic_q_scan",
+              "analytic_qc_250m",
+              "analytic_qc_500m",
+              "analytic_range",
+              "analytic_sensor_azimuth",
+              "analytic_sensor_zenith",
+              "analytic_solar_azimuth",
+              "analytic_solar_zenith",
               "analytic_sr",
+              "analytic_state_1km",
+              "analytic_sur_refl_b01",
+              "analytic_sur_refl_b02",
+              "analytic_sur_refl_b03",
+              "analytic_sur_refl_b04",
+              "analytic_sur_refl_b05",
+              "analytic_sur_refl_b06",
+              "analytic_sur_refl_b07",
               "analytic_xml",
               "basic_analytic",
-              "basic_analytic_4b",
               "basic_analytic_4b_rpc",
+              "basic_analytic_4b",
               "basic_analytic_4b_xml",
               "basic_analytic_8b",
               "basic_analytic_8b_xml",
@@ -536,8 +853,14 @@
               "basic_analytic_b5",
               "basic_analytic_b5_nitf",
               "basic_analytic_dn",
+              "basic_analytic_dn_nitf",
               "basic_analytic_dn_rpc",
+              "basic_analytic_dn_rpc_nitf",
+              "basic_analytic_dn_xml",
+              "basic_analytic_dn_xml_nitf",
+              "basic_analytic_nitf",
               "basic_analytic_rpc",
+              "basic_analytic_rpc_nitf",
               "basic_analytic_sci",
               "basic_analytic_udm",
               "basic_analytic_udm2",
@@ -554,6 +877,8 @@
               "basic_udm",
               "basic_udm2",
               "browse",
+              "metadata_aux",
+              "metadata_txt",
               "ortho_analytic",
               "ortho_analytic_3b",
               "ortho_analytic_3b_xml",
@@ -564,9 +889,13 @@
               "ortho_analytic_8b_sr",
               "ortho_analytic_8b_xml",
               "ortho_analytic_dn",
+              "ortho_analytic_hh",
+              "ortho_analytic_hv",
               "ortho_analytic_sr",
               "ortho_analytic_udm",
               "ortho_analytic_udm2",
+              "ortho_analytic_vh",
+              "ortho_analytic_vv",
               "ortho_panchromatic",
               "ortho_panchromatic_dn",
               "ortho_panchromatic_udm",
@@ -593,6 +922,41 @@
       }
     },
     "types": {
+      "Landsat8L1G": {
+        "properties": {
+          "pl:item_type": {
+            "const": "Landsat8L1G"
+          }
+        }
+      },
+      "MOD09GA": {
+        "properties": {
+          "pl:item_type": {
+            "const": "MOD09GA"
+          }
+        }
+      },
+      "MOD09GQ": {
+        "properties": {
+          "pl:item_type": {
+            "const": "MOD09GQ"
+          }
+        }
+      },
+      "MYD09GA": {
+        "properties": {
+          "pl:item_type": {
+            "const": "MYD09GA"
+          }
+        }
+      },
+      "MYD09GQ": {
+        "properties": {
+          "pl:item_type": {
+            "const": "MYD09GQ"
+          }
+        }
+      },
       "PSOrthoTile": {
         "properties": {
           "pl:item_type": {
@@ -621,6 +985,20 @@
           }
         }
       },
+      "Sentinel1": {
+        "properties": {
+          "pl:item_type": {
+            "const": "Sentinel1"
+          }
+        }
+      },
+      "Sentinel2L1C": {
+        "properties": {
+          "pl:item_type": {
+            "const": "Sentinel2L1C"
+          }
+        }
+      },
       "SkySatCollect": {
         "properties": {
           "pl:item_type": {
@@ -645,6 +1023,26 @@
     },
     "properties": {
       "common_metadata": {
+        "landsat": {
+          "properties": {
+            "constellation": {
+              "const": "usgs"
+            },
+            "platform": {
+              "pattern": "Landsat8"
+            }
+          }
+        },
+        "modis": {
+          "properties": {
+            "constellation": {
+              "const": "usgs"
+            },
+            "platform": {
+              "pattern": "Terra"
+            }
+          }
+        },
         "ps": {
           "properties": {
             "constellation": {
@@ -675,13 +1073,23 @@
             }
           }
         },
+        "sentinel": {
+          "properties": {
+            "constellation": {
+              "const": "esa"
+            },
+            "platform": {
+              "pattern": "SSC\\d+"
+            }
+          }
+        },
         "ss": {
           "properties": {
             "constellation": {
               "const": "skysat"
             },
             "platform": {
-              "pattern": "SSC\\d+"
+              "pattern": "Sentinel\\S+"
             }
           }
         }
@@ -712,12 +1120,19 @@
       "pl:item_type": {
         "type": "string",
         "enum": [
+          "Landsat8L1G",
           "PSOrthoTile",
           "PSScene",
           "PSScene3Band",
           "PSScene4Band",
+          "MOD09GA",
+          "MOD09GQ",
+          "MYD09GA",
+          "MYD09GQ",
           "REOrthoTile",
           "REScene",
+          "Sentinel1",
+          "Sentinel2L1C",
           "SkySatCollect",
           "SkySatScene",
           "SkySatVideo"

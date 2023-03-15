@@ -1,0 +1,802 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "id": "S2A_MSIL1C_20180102T222751_N0206_R072_T01LAL_20180102T233109",
+  "properties": {
+    "updated": "2019-02-22T12:06:26Z",
+    "created": "2019-02-22T12:06:26Z",
+    "gsd": 10,
+    "constellation": "esa",
+    "platform": "Sentinel-2A",
+    "instruments": [
+      "MSI"
+    ],
+    "eo:cloud_cover": 0,
+    "view:off_nadir": 7.3,
+    "view:sun_azimuth": 124.39,
+    "view:sun_elevation": 62.85,
+    "pl:abs_orbit_number": 13225,
+    "pl:black_fill": 0.89,
+    "pl:data_type": "L1C",
+    "pl:datatake_id": "GS2A_20180102T222751_013225_N02.06",
+    "pl:granule_id": "L1C_T01LAL_A013225_20180102T222753",
+    "pl:item_type": "Sentinel2L1C",
+    "pl:mgrs_grid_id": "01LAL",
+    "pl:pixel_resolution": 10,
+    "pl:product_generation_time": "2018-01-02T23:31:09Z",
+    "pl:product_id": "S2A_MSIL1C_20180102T222751_N0206_R072_T01LAL_20180102T233109",
+    "pl:quality_category": "standard",
+    "pl:rel_orbit_number": 72,
+    "pl:s2_processor_version": "02.06",
+    "pl:usable_data": 0.11,
+    "published": "2019-02-22T12:06:26Z",
+    "proj:epsg": null,
+    "datetime": "2018-01-02T22:27:53.459000Z"
+  },
+  "geometry": {
+    "coordinates": [
+      [
+        [
+          [
+            -179.63530123916556,
+            -8.368483898145028
+          ],
+          [
+            -179.69320186181105,
+            -8.352804922089712
+          ],
+          [
+            -179.69333462997616,
+            -8.353406282715763
+          ],
+          [
+            -179.92508181823732,
+            -8.294199731355903
+          ],
+          [
+            -179.92487737244602,
+            -8.293276445981428
+          ],
+          [
+            -180,
+            -8.27430580162188
+          ],
+          [
+            -180,
+            -8.1306715070165
+          ],
+          [
+            -179.6337435289789,
+            -8.133492626022388
+          ],
+          [
+            -179.63530123916556,
+            -8.368483898145028
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            180,
+            -8.27430580162188
+          ],
+          [
+            179.87377848596122,
+            -8.24243120496147
+          ],
+          [
+            179.8736068712393,
+            -8.243204087664292
+          ],
+          [
+            179.6475149705035,
+            -8.188909875858313
+          ],
+          [
+            179.64777992004952,
+            -8.18772003150757
+          ],
+          [
+            179.4495813065681,
+            -8.14120909201564
+          ],
+          [
+            179.44935531778023,
+            -8.142221387068076
+          ],
+          [
+            179.3766557955715,
+            -8.125870149712362
+          ],
+          [
+            180,
+            -8.1306715070165
+          ],
+          [
+            180,
+            -8.27430580162188
+          ]
+        ]
+      ]
+    ],
+    "type": "MultiPolygon"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "./Sentinel2L1C_collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "./Sentinel2L1C_collection.json",
+      "type": "application/json"
+    }
+  ],
+  "assets": {
+    "S2A_MSIL1C_20180102T222751_N0206_R072_T01LAL_20180102T233109_metadata_json": {
+      "href": "./S2A_MSIL1C_20180102T222751_N0206_R072_T01LAL_20180102T233109_metadata.json",
+      "type": "application/json",
+      "roles": [
+        "metadata"
+      ]
+    },
+    "T01LAL_20180102T222751_B01_jp2": {
+      "href": "./T01LAL_20180102T222751_B01.jp2",
+      "type": "image/jp2",
+      "pl:asset_type": "analytic_b1",
+      "pl:bundle_type": "analytic",
+      "raster:bands": [
+        {
+          "data_type": "uint16",
+          "spatial_resolution": 60.0,
+          "statistics": {
+            "minimum": 0.0,
+            "maximum": 3386.0
+          }
+        }
+      ],
+      "eo:bands": [
+        {
+          "name": "Ultra Blue",
+          "common_name": "coastal",
+          "center_wavelength": 0.443,
+          "full_width_half_max": 0.02
+        }
+      ],
+      "proj:epsg": 32701,
+      "proj:bbox": [
+        99960.0,
+        8990200.0,
+        209760.0,
+        9100000.0
+      ],
+      "proj:shape": [
+        1830,
+        1830
+      ],
+      "proj:transform": [
+        60.0,
+        0.0,
+        99960.0,
+        0.0,
+        -60.0,
+        9100000.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "T01LAL_20180102T222751_B02_jp2": {
+      "href": "./T01LAL_20180102T222751_B02.jp2",
+      "type": "image/jp2",
+      "pl:asset_type": "analytic_b2",
+      "pl:bundle_type": "analytic",
+      "raster:bands": [
+        {
+          "data_type": "uint16",
+          "spatial_resolution": 10.0,
+          "statistics": {
+            "minimum": 0.0,
+            "maximum": 3387.0
+          }
+        }
+      ],
+      "eo:bands": [
+        {
+          "name": "Blue",
+          "common_name": "blue",
+          "center_wavelength": 0.492,
+          "full_width_half_max": 0.065
+        }
+      ],
+      "proj:epsg": 32701,
+      "proj:bbox": [
+        99960.0,
+        8990200.0,
+        209760.0,
+        9100000.0
+      ],
+      "proj:shape": [
+        10980,
+        10980
+      ],
+      "proj:transform": [
+        10.0,
+        0.0,
+        99960.0,
+        0.0,
+        -10.0,
+        9100000.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "T01LAL_20180102T222751_B03_jp2": {
+      "href": "./T01LAL_20180102T222751_B03.jp2",
+      "type": "image/jp2",
+      "pl:asset_type": "analytic_b3",
+      "pl:bundle_type": "analytic",
+      "raster:bands": [
+        {
+          "data_type": "uint16",
+          "spatial_resolution": 10.0,
+          "statistics": {
+            "minimum": 0.0,
+            "maximum": 3062.0
+          }
+        }
+      ],
+      "eo:bands": [
+        {
+          "name": "Green",
+          "common_name": "green",
+          "center_wavelength": 0.559,
+          "full_width_half_max": 0.035
+        }
+      ],
+      "proj:epsg": 32701,
+      "proj:bbox": [
+        99960.0,
+        8990200.0,
+        209760.0,
+        9100000.0
+      ],
+      "proj:shape": [
+        10980,
+        10980
+      ],
+      "proj:transform": [
+        10.0,
+        0.0,
+        99960.0,
+        0.0,
+        -10.0,
+        9100000.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "T01LAL_20180102T222751_B04_jp2": {
+      "href": "./T01LAL_20180102T222751_B04.jp2",
+      "type": "image/jp2",
+      "pl:asset_type": "analytic_b4",
+      "pl:bundle_type": "analytic",
+      "raster:bands": [
+        {
+          "data_type": "uint16",
+          "spatial_resolution": 10.0,
+          "statistics": {
+            "minimum": 0.0,
+            "maximum": 3106.0
+          }
+        }
+      ],
+      "eo:bands": [
+        {
+          "name": "Red",
+          "common_name": "red",
+          "center_wavelength": 0.655,
+          "full_width_half_max": 0.031
+        }
+      ],
+      "proj:epsg": 32701,
+      "proj:bbox": [
+        99960.0,
+        8990200.0,
+        209760.0,
+        9100000.0
+      ],
+      "proj:shape": [
+        10980,
+        10980
+      ],
+      "proj:transform": [
+        10.0,
+        0.0,
+        99960.0,
+        0.0,
+        -10.0,
+        9100000.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "T01LAL_20180102T222751_B05_jp2": {
+      "href": "./T01LAL_20180102T222751_B05.jp2",
+      "type": "image/jp2",
+      "pl:asset_type": "analytic_b5",
+      "pl:bundle_type": "analytic",
+      "raster:bands": [
+        {
+          "data_type": "uint16",
+          "spatial_resolution": 20.0,
+          "statistics": {
+            "minimum": 0.0,
+            "maximum": 2899.0
+          }
+        }
+      ],
+      "eo:bands": [
+        {
+          "name": "Red Edge 1",
+          "common_name": "rededge",
+          "center_wavelength": 0.704,
+          "full_width_half_max": 0.015
+        }
+      ],
+      "proj:epsg": 32701,
+      "proj:bbox": [
+        99960.0,
+        8990200.0,
+        209760.0,
+        9100000.0
+      ],
+      "proj:shape": [
+        5490,
+        5490
+      ],
+      "proj:transform": [
+        20.0,
+        0.0,
+        99960.0,
+        0.0,
+        -20.0,
+        9100000.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "T01LAL_20180102T222751_B06_jp2": {
+      "href": "./T01LAL_20180102T222751_B06.jp2",
+      "type": "image/jp2",
+      "pl:asset_type": "analytic_b6",
+      "pl:bundle_type": "analytic",
+      "raster:bands": [
+        {
+          "data_type": "uint16",
+          "spatial_resolution": 20.0,
+          "statistics": {
+            "minimum": 0.0,
+            "maximum": 3001.0
+          }
+        }
+      ],
+      "eo:bands": [
+        {
+          "name": "Red Edge 2",
+          "common_name": "rededge",
+          "center_wavelength": 0.74,
+          "full_width_half_max": 0.013
+        }
+      ],
+      "proj:epsg": 32701,
+      "proj:bbox": [
+        99960.0,
+        8990200.0,
+        209760.0,
+        9100000.0
+      ],
+      "proj:shape": [
+        5490,
+        5490
+      ],
+      "proj:transform": [
+        20.0,
+        0.0,
+        99960.0,
+        0.0,
+        -20.0,
+        9100000.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "T01LAL_20180102T222751_B07_jp2": {
+      "href": "./T01LAL_20180102T222751_B07.jp2",
+      "type": "image/jp2",
+      "pl:asset_type": "analytic_b7",
+      "pl:bundle_type": "analytic",
+      "raster:bands": [
+        {
+          "data_type": "uint16",
+          "spatial_resolution": 20.0,
+          "statistics": {
+            "minimum": 0.0,
+            "maximum": 3132.0
+          }
+        }
+      ],
+      "eo:bands": [
+        {
+          "name": "Red Edge 3",
+          "common_name": "rededge",
+          "center_wavelength": 0.783,
+          "full_width_half_max": 0.019
+        }
+      ],
+      "proj:epsg": 32701,
+      "proj:bbox": [
+        99960.0,
+        8990200.0,
+        209760.0,
+        9100000.0
+      ],
+      "proj:shape": [
+        5490,
+        5490
+      ],
+      "proj:transform": [
+        20.0,
+        0.0,
+        99960.0,
+        0.0,
+        -20.0,
+        9100000.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "T01LAL_20180102T222751_B08_jp2": {
+      "href": "./T01LAL_20180102T222751_B08.jp2",
+      "type": "image/jp2",
+      "pl:asset_type": "analytic_b8",
+      "pl:bundle_type": "analytic",
+      "raster:bands": [
+        {
+          "data_type": "uint16",
+          "spatial_resolution": 10.0,
+          "statistics": {
+            "minimum": 0.0,
+            "maximum": 2908.0
+          }
+        }
+      ],
+      "eo:bands": [
+        {
+          "name": "Near-Infrared (10m)",
+          "common_name": "nir",
+          "center_wavelength": 0.833,
+          "full_width_half_max": 0.104
+        }
+      ],
+      "proj:epsg": 32701,
+      "proj:bbox": [
+        99960.0,
+        8990200.0,
+        209760.0,
+        9100000.0
+      ],
+      "proj:shape": [
+        10980,
+        10980
+      ],
+      "proj:transform": [
+        10.0,
+        0.0,
+        99960.0,
+        0.0,
+        -10.0,
+        9100000.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "T01LAL_20180102T222751_B09_jp2": {
+      "href": "./T01LAL_20180102T222751_B09.jp2",
+      "type": "image/jp2",
+      "pl:asset_type": "analytic_b9",
+      "pl:bundle_type": "analytic",
+      "raster:bands": [
+        {
+          "data_type": "uint16",
+          "spatial_resolution": 60.0,
+          "statistics": {
+            "minimum": 0.0,
+            "maximum": 647.0
+          }
+        }
+      ],
+      "eo:bands": [
+        {
+          "name": "Near-Infrared (60m)",
+          "common_name": "nir09",
+          "center_wavelength": 0.944,
+          "full_width_half_max": 0.02
+        }
+      ],
+      "proj:epsg": 32701,
+      "proj:bbox": [
+        99960.0,
+        8990200.0,
+        209760.0,
+        9100000.0
+      ],
+      "proj:shape": [
+        1830,
+        1830
+      ],
+      "proj:transform": [
+        60.0,
+        0.0,
+        99960.0,
+        0.0,
+        -60.0,
+        9100000.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "T01LAL_20180102T222751_B10_jp2": {
+      "href": "./T01LAL_20180102T222751_B10.jp2",
+      "type": "image/jp2",
+      "pl:asset_type": "analytic_b10",
+      "pl:bundle_type": "analytic",
+      "raster:bands": [
+        {
+          "data_type": "uint16",
+          "spatial_resolution": 60.0,
+          "statistics": {
+            "minimum": 0.0,
+            "maximum": 77.0
+          }
+        }
+      ],
+      "eo:bands": [
+        {
+          "name": "Cirrus",
+          "common_name": "cirrus",
+          "center_wavelength": 1.375,
+          "full_width_half_max": 0.029
+        }
+      ],
+      "proj:epsg": 32701,
+      "proj:bbox": [
+        99960.0,
+        8990200.0,
+        209760.0,
+        9100000.0
+      ],
+      "proj:shape": [
+        1830,
+        1830
+      ],
+      "proj:transform": [
+        60.0,
+        0.0,
+        99960.0,
+        0.0,
+        -60.0,
+        9100000.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "T01LAL_20180102T222751_B11_jp2": {
+      "href": "./T01LAL_20180102T222751_B11.jp2",
+      "type": "image/jp2",
+      "pl:asset_type": "analytic_b11",
+      "pl:bundle_type": "analytic",
+      "raster:bands": [
+        {
+          "data_type": "uint16",
+          "spatial_resolution": 20.0,
+          "statistics": {
+            "minimum": 0.0,
+            "maximum": 3097.0
+          }
+        }
+      ],
+      "eo:bands": [
+        {
+          "name": "Shortwave Infrared 1",
+          "common_name": "swir16",
+          "center_wavelength": 1.61,
+          "full_width_half_max": 0.094
+        }
+      ],
+      "proj:epsg": 32701,
+      "proj:bbox": [
+        99960.0,
+        8990200.0,
+        209760.0,
+        9100000.0
+      ],
+      "proj:shape": [
+        5490,
+        5490
+      ],
+      "proj:transform": [
+        20.0,
+        0.0,
+        99960.0,
+        0.0,
+        -20.0,
+        9100000.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "T01LAL_20180102T222751_B12_jp2": {
+      "href": "./T01LAL_20180102T222751_B12.jp2",
+      "type": "image/jp2",
+      "pl:asset_type": "analytic_b12",
+      "pl:bundle_type": "analytic",
+      "raster:bands": [
+        {
+          "data_type": "uint16",
+          "spatial_resolution": 20.0,
+          "statistics": {
+            "minimum": 0.0,
+            "maximum": 2852.0
+          }
+        }
+      ],
+      "eo:bands": [
+        {
+          "name": "Shortwave Infrared 2",
+          "common_name": "swir22",
+          "center_wavelength": 2.19,
+          "full_width_half_max": 0.184
+        }
+      ],
+      "proj:epsg": 32701,
+      "proj:bbox": [
+        99960.0,
+        8990200.0,
+        209760.0,
+        9100000.0
+      ],
+      "proj:shape": [
+        5490,
+        5490
+      ],
+      "proj:transform": [
+        20.0,
+        0.0,
+        99960.0,
+        0.0,
+        -20.0,
+        9100000.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "T01LAL_20180102T222751_B8A_jp2": {
+      "href": "./T01LAL_20180102T222751_B8A.jp2",
+      "type": "image/jp2",
+      "pl:asset_type": "analytic_b8a",
+      "pl:bundle_type": "analytic",
+      "raster:bands": [
+        {
+          "data_type": "uint16",
+          "spatial_resolution": 20.0,
+          "statistics": {
+            "minimum": 0.0,
+            "maximum": 3241.0
+          }
+        }
+      ],
+      "eo:bands": [
+        {
+          "name": "Near-Infrared (20m)",
+          "common_name": "nir08",
+          "center_wavelength": 0.865,
+          "full_width_half_max": 0.021
+        }
+      ],
+      "proj:epsg": 32701,
+      "proj:bbox": [
+        99960.0,
+        8990200.0,
+        209760.0,
+        9100000.0
+      ],
+      "proj:shape": [
+        5490,
+        5490
+      ],
+      "proj:transform": [
+        20.0,
+        0.0,
+        99960.0,
+        0.0,
+        -20.0,
+        9100000.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "roles": [
+        "data"
+      ]
+    }
+  },
+  "bbox": [
+    -180.0,
+    -8.368483898145028,
+    180.0,
+    -8.125870149712362
+  ],
+  "stac_extensions": [
+    "https://planetlabs.github.io/stac-extension/v1.0.0-beta.1/schema.json",
+    "https://stac-extensions.github.io/eo/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/view/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v1.0.0/schema.json"
+  ],
+  "collection": "90190d3b-d9b2-4107-bb7d-3c6078bfaaf8: Sentinel2L1C"
+}

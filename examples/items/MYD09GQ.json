@@ -1,0 +1,277 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "id": "MYD09GQ.A2023009.h29v12.061.2023011071140",
+  "properties": {
+    "updated": "2023-01-13T03:35:26Z",
+    "created": "2023-01-13T03:35:26Z",
+    "gsd": 250,
+    "constellation": "usgs",
+    "platform": "Aqua",
+    "instruments": [
+      "MODIS"
+    ],
+    "eo:cloud_cover": 0,
+    "view:off_nadir": 0,
+    "view:sun_azimuth": 0,
+    "view:sun_elevation": 0,
+    "pl:black_fill": 0,
+    "pl:data_type": "L2GL",
+    "pl:item_type": "MYD09GQ",
+    "pl:orbit_direction": "ASC",
+    "pl:pixel_resolution": 250,
+    "pl:product_generation_time": "2023-01-11T07:11:40Z",
+    "pl:product_version": "6.0.9",
+    "pl:quality_category": "standard",
+    "pl:sgrid_tile_id": "h29v12",
+    "pl:usable_data": 1,
+    "published": "2023-01-13T03:35:26Z",
+    "proj:epsg": null,
+    "datetime": "2023-01-09T11:59:59Z"
+  },
+  "geometry": {
+    "coordinates": [
+      [
+        [
+          126.94995144715973,
+          -30.141972433756095
+        ],
+        [
+          138.4908561241686,
+          -30.141972433756095
+        ],
+        [
+          156.63388116255626,
+          -40.16456836550465
+        ],
+        [
+          143.58105773234908,
+          -40.16456836550465
+        ],
+        [
+          126.94995144715973,
+          -30.141972433756095
+        ]
+      ]
+    ],
+    "type": "Polygon"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "./MYD09GQ_collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "./MYD09GQ_collection.json",
+      "type": "application/json"
+    }
+  ],
+  "assets": {
+    "MYD09GQ_A2023009_h29v12_061_2023011071140_metadata_json": {
+      "href": "./MYD09GQ.A2023009.h29v12.061.2023011071140_metadata.json",
+      "type": "application/json",
+      "roles": [
+        "metadata"
+      ]
+    },
+    "MYD09GQ_A2023009_h29v12_061_2023011071140_GRANULE_PNT_tif": {
+      "href": "./MYD09GQ.A2023009.h29v12.061.2023011071140.GRANULE_PNT.tif",
+      "type": "image/tiff",
+      "pl:asset_type": "analytic_granule_pnt",
+      "pl:bundle_type": "analytic_sr",
+      "raster:bands": [
+        {
+          "nodata": 0.0,
+          "data_type": "uint8",
+          "spatial_resolution": 231.65635826395828,
+          "statistics": {
+            "minimum": 1.0,
+            "maximum": 255.0
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "MYD09GQ_A2023009_h29v12_061_2023011071140_IOBS_RES_tif": {
+      "href": "./MYD09GQ.A2023009.h29v12.061.2023011071140.IOBS_RES.tif",
+      "type": "image/tiff",
+      "pl:asset_type": "analytic_iobs_res",
+      "pl:bundle_type": "analytic_sr",
+      "raster:bands": [
+        {
+          "nodata": 255.0,
+          "data_type": "uint8",
+          "spatial_resolution": 231.65635826395828,
+          "statistics": {
+            "minimum": 0.0,
+            "maximum": 8.0
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "MYD09GQ_A2023009_h29v12_061_2023011071140_NUM_OBSERVATIONS_tif": {
+      "href": "./MYD09GQ.A2023009.h29v12.061.2023011071140.NUM_OBSERVATIONS.tif",
+      "type": "image/tiff",
+      "pl:asset_type": "analytic_num_observations",
+      "pl:bundle_type": "analytic_sr",
+      "raster:bands": [
+        {
+          "nodata": -1.0,
+          "data_type": "int8",
+          "spatial_resolution": 231.65635826395828,
+          "statistics": {
+            "minimum": 0.0,
+            "maximum": 2.0
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "MYD09GQ_A2023009_h29v12_061_2023011071140_OBSCOV_tif": {
+      "href": "./MYD09GQ.A2023009.h29v12.061.2023011071140.OBSCOV.tif",
+      "type": "image/tiff",
+      "pl:asset_type": "analytic_obscov",
+      "pl:bundle_type": "analytic_sr",
+      "raster:bands": [
+        {
+          "nodata": -1.0,
+          "data_type": "int8",
+          "spatial_resolution": 231.65635826395828,
+          "statistics": {
+            "minimum": 0.0,
+            "maximum": 56.0
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "MYD09GQ_A2023009_h29v12_061_2023011071140_ORBIT_PNT_tif": {
+      "href": "./MYD09GQ.A2023009.h29v12.061.2023011071140.ORBIT_PNT.tif",
+      "type": "image/tiff",
+      "pl:asset_type": "analytic_orbit_pnt",
+      "pl:bundle_type": "analytic_sr",
+      "raster:bands": [
+        {
+          "nodata": 0.0,
+          "data_type": "uint8",
+          "spatial_resolution": 231.65635826395828,
+          "statistics": {
+            "minimum": 1.0,
+            "maximum": 255.0
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "MYD09GQ_A2023009_h29v12_061_2023011071140_QC_250M_tif": {
+      "href": "./MYD09GQ.A2023009.h29v12.061.2023011071140.QC_250M.tif",
+      "type": "image/tiff",
+      "pl:asset_type": "analytic_qc_250m",
+      "pl:bundle_type": "analytic_sr",
+      "raster:bands": [
+        {
+          "nodata": 2995.0,
+          "data_type": "uint16",
+          "spatial_resolution": 231.65635826395828,
+          "statistics": {
+            "minimum": 4096.0,
+            "maximum": 7683.0
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "MYD09GQ_A2023009_h29v12_061_2023011071140_SUR_REFL_B01_tif": {
+      "href": "./MYD09GQ.A2023009.h29v12.061.2023011071140.SUR_REFL_B01.tif",
+      "type": "image/tiff",
+      "pl:asset_type": "analytic_sur_refl_b01",
+      "pl:bundle_type": "analytic_sr",
+      "raster:bands": [
+        {
+          "nodata": -28672.0,
+          "data_type": "int16",
+          "spatial_resolution": 231.65635826395828,
+          "statistics": {
+            "minimum": -100.0,
+            "maximum": 13499.0
+          }
+        }
+      ],
+      "eo:bands": [
+        {
+          "name": "Red",
+          "common_name": "red",
+          "center_wavelength": 0.645,
+          "full_width_half_max": 50
+        }
+      ],
+      "roles": [
+        "data",
+        "reflectance"
+      ]
+    },
+    "MYD09GQ_A2023009_h29v12_061_2023011071140_SUR_REFL_B02_tif": {
+      "href": "./MYD09GQ.A2023009.h29v12.061.2023011071140.SUR_REFL_B02.tif",
+      "type": "image/tiff",
+      "pl:asset_type": "analytic_sur_refl_b02",
+      "pl:bundle_type": "analytic_sr",
+      "raster:bands": [
+        {
+          "nodata": -28672.0,
+          "data_type": "int16",
+          "spatial_resolution": 231.65635826395828,
+          "statistics": {
+            "minimum": -100.0,
+            "maximum": 8749.0
+          }
+        }
+      ],
+      "eo:bands": [
+        {
+          "name": "Near-Infrared 1",
+          "common_name": "nir",
+          "center_wavelength": 0.859,
+          "full_width_half_max": 35
+        }
+      ],
+      "roles": [
+        "data",
+        "reflectance"
+      ]
+    }
+  },
+  "bbox": [
+    126.94995144715973,
+    -40.16456836550465,
+    156.63388116255626,
+    -30.141972433756095
+  ],
+  "stac_extensions": [
+    "https://planetlabs.github.io/stac-extension/v1.0.0-beta.1/schema.json",
+    "https://stac-extensions.github.io/eo/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/view/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v1.0.0/schema.json"
+  ],
+  "collection": "f113299d-7128-4c37-b7a3-c6556d8f2e5c: MYD09GQ"
+}

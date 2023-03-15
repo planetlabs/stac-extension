@@ -22,7 +22,7 @@ STAC Item properties (if not stated otherwise) and lists for which `pl:item_type
 | *pl:grid_cell*                          | grid_cell                  | ✓ |   | ✓ |   |   |   |   |   |   |   |   |   |   |   |
 | *pl:ground_control*                     | ground_control             | ✓ | ✓ | ✓ |   |   | ✓ |   |   |   |   |   |   |   |   |
 | *pl:ground_control_ratio*               | ground_control_ratio       |   |   |   |   | ✓ |   |   |   |   |   |   |   |   |   |
-| gsd                                     | **gsd**                    | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |   | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  
+| gsd                                     | **gsd**                    | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |   | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | -                                       | heavy_haze_percent         | ✓ | ✓ |   |   | ✓ | ✓ |   |   |   |   |   |   |   |   |
 | instruments\[0]                         | instrument                 | ✓ | ✓ |   |   |   |   |   | ✓ | ✓ | ✓ | ✓ | ✓ |   | ✓ |
 | *pl:item_type*                          | **item_type**              | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |

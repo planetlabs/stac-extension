@@ -89,34 +89,34 @@
       "raster:bands": [
         {
           "data_type": "uint8",
-          "spatial_resolution": 30.0,
+          "spatial_resolution": 30,
           "statistics": {
-            "minimum": 0.0,
-            "maximum": 255.0
+            "minimum": 0,
+            "maximum": 255
           }
         },
         {
           "data_type": "uint8",
-          "spatial_resolution": 30.0,
+          "spatial_resolution": 30,
           "statistics": {
-            "minimum": 0.0,
-            "maximum": 255.0
+            "minimum": 0,
+            "maximum": 255
           }
         },
         {
           "data_type": "uint8",
-          "spatial_resolution": 30.0,
+          "spatial_resolution": 30,
           "statistics": {
-            "minimum": 0.0,
-            "maximum": 255.0
+            "minimum": 0,
+            "maximum": 255
           }
         },
         {
           "data_type": "uint8",
-          "spatial_resolution": 30.0,
+          "spatial_resolution": 30,
           "statistics": {
-            "minimum": 0.0,
-            "maximum": 255.0
+            "minimum": 0,
+            "maximum": 255
           }
         }
       ],
@@ -146,25 +146,25 @@
       ],
       "proj:epsg": 32623,
       "proj:bbox": [
-        611985.0,
-        -916815.0,
-        840615.0,
-        -683685.0
+        611985,
+        -916815,
+        840615,
+        -683685
       ],
       "proj:shape": [
         7771,
         7621
       ],
       "proj:transform": [
-        30.0,
-        0.0,
-        611985.0,
-        0.0,
-        -30.0,
-        -683685.0,
-        0.0,
-        0.0,
-        1.0
+        30,
+        0,
+        611985,
+        0,
+        -30,
+        -683685,
+        0,
+        0,
+        1
       ],
       "roles": [
         "data",

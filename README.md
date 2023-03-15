@@ -164,7 +164,7 @@ The following patterns are allowed for the Planet Labs satellites:
 For non Planet Satellites:
 
 - Landsat8: `Landsat8`
-- MODIS: `Terra`
+- MODIS: `Terra` or `Aqua`
 - Sentinel: `Sentinel\w+`
 
 #### instruments

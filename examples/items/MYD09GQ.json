@@ -88,12 +88,12 @@
       "pl:bundle_type": "analytic_sr",
       "raster:bands": [
         {
-          "nodata": 0.0,
+          "nodata": 0,
           "data_type": "uint8",
           "spatial_resolution": 231.65635826395828,
           "statistics": {
-            "minimum": 1.0,
-            "maximum": 255.0
+            "minimum": 1,
+            "maximum": 255
           }
         }
       ],
@@ -108,12 +108,12 @@
       "pl:bundle_type": "analytic_sr",
       "raster:bands": [
         {
-          "nodata": 255.0,
+          "nodata": 255,
           "data_type": "uint8",
           "spatial_resolution": 231.65635826395828,
           "statistics": {
-            "minimum": 0.0,
-            "maximum": 8.0
+            "minimum": 0,
+            "maximum": 8
           }
         }
       ],
@@ -128,12 +128,12 @@
       "pl:bundle_type": "analytic_sr",
       "raster:bands": [
         {
-          "nodata": -1.0,
+          "nodata": -1,
           "data_type": "int8",
           "spatial_resolution": 231.65635826395828,
           "statistics": {
-            "minimum": 0.0,
-            "maximum": 2.0
+            "minimum": 0,
+            "maximum": 2
           }
         }
       ],
@@ -148,12 +148,12 @@
       "pl:bundle_type": "analytic_sr",
       "raster:bands": [
         {
-          "nodata": -1.0,
+          "nodata": -1,
           "data_type": "int8",
           "spatial_resolution": 231.65635826395828,
           "statistics": {
-            "minimum": 0.0,
-            "maximum": 56.0
+            "minimum": 0,
+            "maximum": 56
           }
         }
       ],
@@ -168,12 +168,12 @@
       "pl:bundle_type": "analytic_sr",
       "raster:bands": [
         {
-          "nodata": 0.0,
+          "nodata": 0,
           "data_type": "uint8",
           "spatial_resolution": 231.65635826395828,
           "statistics": {
-            "minimum": 1.0,
-            "maximum": 255.0
+            "minimum": 1,
+            "maximum": 255
           }
         }
       ],
@@ -188,12 +188,12 @@
       "pl:bundle_type": "analytic_sr",
       "raster:bands": [
         {
-          "nodata": 2995.0,
+          "nodata": 2995,
           "data_type": "uint16",
           "spatial_resolution": 231.65635826395828,
           "statistics": {
-            "minimum": 4096.0,
-            "maximum": 7683.0
+            "minimum": 4096,
+            "maximum": 7683
           }
         }
       ],
@@ -208,12 +208,12 @@
       "pl:bundle_type": "analytic_sr",
       "raster:bands": [
         {
-          "nodata": -28672.0,
+          "nodata": -28672,
           "data_type": "int16",
           "spatial_resolution": 231.65635826395828,
           "statistics": {
-            "minimum": -100.0,
-            "maximum": 13499.0
+            "minimum": -100,
+            "maximum": 13499
           }
         }
       ],
@@ -237,12 +237,12 @@
       "pl:bundle_type": "analytic_sr",
       "raster:bands": [
         {
-          "nodata": -28672.0,
+          "nodata": -28672,
           "data_type": "int16",
           "spatial_resolution": 231.65635826395828,
           "statistics": {
-            "minimum": -100.0,
-            "maximum": 8749.0
+            "minimum": -100,
+            "maximum": 8749
           }
         }
       ],

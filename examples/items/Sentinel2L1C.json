@@ -155,10 +155,10 @@
       "raster:bands": [
         {
           "data_type": "uint16",
-          "spatial_resolution": 60.0,
+          "spatial_resolution": 60,
           "statistics": {
-            "minimum": 0.0,
-            "maximum": 3386.0
+            "minimum": 0,
+            "maximum": 3386
           }
         }
       ],
@@ -172,25 +172,25 @@
       ],
       "proj:epsg": 32701,
       "proj:bbox": [
-        99960.0,
-        8990200.0,
-        209760.0,
-        9100000.0
+        99960,
+        8990200,
+        209760,
+        9100000
       ],
       "proj:shape": [
         1830,
         1830
       ],
       "proj:transform": [
-        60.0,
-        0.0,
-        99960.0,
-        0.0,
-        -60.0,
-        9100000.0,
-        0.0,
-        0.0,
-        1.0
+        60,
+        0,
+        99960,
+        0,
+        -60,
+        9100000,
+        0,
+        0,
+        1
       ],
       "roles": [
         "data"
@@ -204,10 +204,10 @@
       "raster:bands": [
         {
           "data_type": "uint16",
-          "spatial_resolution": 10.0,
+          "spatial_resolution": 10,
           "statistics": {
-            "minimum": 0.0,
-            "maximum": 3387.0
+            "minimum": 0,
+            "maximum": 3387
           }
         }
       ],
@@ -221,25 +221,25 @@
       ],
       "proj:epsg": 32701,
       "proj:bbox": [
-        99960.0,
-        8990200.0,
-        209760.0,
-        9100000.0
+        99960,
+        8990200,
+        209760,
+        9100000
       ],
       "proj:shape": [
         10980,
         10980
       ],
       "proj:transform": [
-        10.0,
-        0.0,
-        99960.0,
-        0.0,
-        -10.0,
-        9100000.0,
-        0.0,
-        0.0,
-        1.0
+        10,
+        0,
+        99960,
+        0,
+        -10,
+        9100000,
+        0,
+        0,
+        1
       ],
       "roles": [
         "data"
@@ -253,10 +253,10 @@
       "raster:bands": [
         {
           "data_type": "uint16",
-          "spatial_resolution": 10.0,
+          "spatial_resolution": 10,
           "statistics": {
-            "minimum": 0.0,
-            "maximum": 3062.0
+            "minimum": 0,
+            "maximum": 3062
           }
         }
       ],
@@ -270,25 +270,25 @@
       ],
       "proj:epsg": 32701,
       "proj:bbox": [
-        99960.0,
-        8990200.0,
-        209760.0,
-        9100000.0
+        99960,
+        8990200,
+        209760,
+        9100000
       ],
       "proj:shape": [
         10980,
         10980
       ],
       "proj:transform": [
-        10.0,
-        0.0,
-        99960.0,
-        0.0,
-        -10.0,
-        9100000.0,
-        0.0,
-        0.0,
-        1.0
+        10,
+        0,
+        99960,
+        0,
+        -10,
+        9100000,
+        0,
+        0,
+        1
       ],
       "roles": [
         "data"
@@ -302,10 +302,10 @@
       "raster:bands": [
         {
           "data_type": "uint16",
-          "spatial_resolution": 10.0,
+          "spatial_resolution": 10,
           "statistics": {
-            "minimum": 0.0,
-            "maximum": 3106.0
+            "minimum": 0,
+            "maximum": 3106
           }
         }
       ],
@@ -319,25 +319,25 @@
       ],
       "proj:epsg": 32701,
       "proj:bbox": [
-        99960.0,
-        8990200.0,
-        209760.0,
-        9100000.0
+        99960,
+        8990200,
+        209760,
+        9100000
       ],
       "proj:shape": [
         10980,
         10980
       ],
       "proj:transform": [
-        10.0,
-        0.0,
-        99960.0,
-        0.0,
-        -10.0,
-        9100000.0,
-        0.0,
-        0.0,
-        1.0
+        10,
+        0,
+        99960,
+        0,
+        -10,
+        9100000,
+        0,
+        0,
+        1
       ],
       "roles": [
         "data"
@@ -351,10 +351,10 @@
       "raster:bands": [
         {
           "data_type": "uint16",
-          "spatial_resolution": 20.0,
+          "spatial_resolution": 20,
           "statistics": {
-            "minimum": 0.0,
-            "maximum": 2899.0
+            "minimum": 0,
+            "maximum": 2899
           }
         }
       ],
@@ -368,25 +368,25 @@
       ],
       "proj:epsg": 32701,
       "proj:bbox": [
-        99960.0,
-        8990200.0,
-        209760.0,
-        9100000.0
+        99960,
+        8990200,
+        209760,
+        9100000
       ],
       "proj:shape": [
         5490,
         5490
       ],
       "proj:transform": [
-        20.0,
-        0.0,
-        99960.0,
-        0.0,
-        -20.0,
-        9100000.0,
-        0.0,
-        0.0,
-        1.0
+        20,
+        0,
+        99960,
+        0,
+        -20,
+        9100000,
+        0,
+        0,
+        1
       ],
       "roles": [
         "data"
@@ -400,10 +400,10 @@
       "raster:bands": [
         {
           "data_type": "uint16",
-          "spatial_resolution": 20.0,
+          "spatial_resolution": 20,
           "statistics": {
-            "minimum": 0.0,
-            "maximum": 3001.0
+            "minimum": 0,
+            "maximum": 3001
           }
         }
       ],
@@ -417,25 +417,25 @@
       ],
       "proj:epsg": 32701,
       "proj:bbox": [
-        99960.0,
-        8990200.0,
-        209760.0,
-        9100000.0
+        99960,
+        8990200,
+        209760,
+        9100000
       ],
       "proj:shape": [
         5490,
         5490
       ],
       "proj:transform": [
-        20.0,
-        0.0,
-        99960.0,
-        0.0,
-        -20.0,
-        9100000.0,
-        0.0,
-        0.0,
-        1.0
+        20,
+        0,
+        99960,
+        0,
+        -20,
+        9100000,
+        0,
+        0,
+        1
       ],
       "roles": [
         "data"
@@ -449,10 +449,10 @@
       "raster:bands": [
         {
           "data_type": "uint16",
-          "spatial_resolution": 20.0,
+          "spatial_resolution": 20,
           "statistics": {
-            "minimum": 0.0,
-            "maximum": 3132.0
+            "minimum": 0,
+            "maximum": 3132
           }
         }
       ],
@@ -466,25 +466,25 @@
       ],
       "proj:epsg": 32701,
       "proj:bbox": [
-        99960.0,
-        8990200.0,
-        209760.0,
-        9100000.0
+        99960,
+        8990200,
+        209760,
+        9100000
       ],
       "proj:shape": [
         5490,
         5490
       ],
       "proj:transform": [
-        20.0,
-        0.0,
-        99960.0,
-        0.0,
-        -20.0,
-        9100000.0,
-        0.0,
-        0.0,
-        1.0
+        20,
+        0,
+        99960,
+        0,
+        -20,
+        9100000,
+        0,
+        0,
+        1
       ],
       "roles": [
         "data"
@@ -498,10 +498,10 @@
       "raster:bands": [
         {
           "data_type": "uint16",
-          "spatial_resolution": 10.0,
+          "spatial_resolution": 10,
           "statistics": {
-            "minimum": 0.0,
-            "maximum": 2908.0
+            "minimum": 0,
+            "maximum": 2908
           }
         }
       ],
@@ -515,25 +515,25 @@
       ],
       "proj:epsg": 32701,
       "proj:bbox": [
-        99960.0,
-        8990200.0,
-        209760.0,
-        9100000.0
+        99960,
+        8990200,
+        209760,
+        9100000
       ],
       "proj:shape": [
         10980,
         10980
       ],
       "proj:transform": [
-        10.0,
-        0.0,
-        99960.0,
-        0.0,
-        -10.0,
-        9100000.0,
-        0.0,
-        0.0,
-        1.0
+        10,
+        0,
+        99960,
+        0,
+        -10,
+        9100000,
+        0,
+        0,
+        1
       ],
       "roles": [
         "data"
@@ -547,10 +547,10 @@
       "raster:bands": [
         {
           "data_type": "uint16",
-          "spatial_resolution": 60.0,
+          "spatial_resolution": 60,
           "statistics": {
-            "minimum": 0.0,
-            "maximum": 647.0
+            "minimum": 0,
+            "maximum": 647
           }
         }
       ],
@@ -564,25 +564,25 @@
       ],
       "proj:epsg": 32701,
       "proj:bbox": [
-        99960.0,
-        8990200.0,
-        209760.0,
-        9100000.0
+        99960,
+        8990200,
+        209760,
+        9100000
       ],
       "proj:shape": [
         1830,
         1830
       ],
       "proj:transform": [
-        60.0,
-        0.0,
-        99960.0,
-        0.0,
-        -60.0,
-        9100000.0,
-        0.0,
-        0.0,
-        1.0
+        60,
+        0,
+        99960,
+        0,
+        -60,
+        9100000,
+        0,
+        0,
+        1
       ],
       "roles": [
         "data"
@@ -596,10 +596,10 @@
       "raster:bands": [
         {
           "data_type": "uint16",
-          "spatial_resolution": 60.0,
+          "spatial_resolution": 60,
           "statistics": {
-            "minimum": 0.0,
-            "maximum": 77.0
+            "minimum": 0,
+            "maximum": 77
           }
         }
       ],
@@ -613,25 +613,25 @@
       ],
       "proj:epsg": 32701,
       "proj:bbox": [
-        99960.0,
-        8990200.0,
-        209760.0,
-        9100000.0
+        99960,
+        8990200,
+        209760,
+        9100000
       ],
       "proj:shape": [
         1830,
         1830
       ],
       "proj:transform": [
-        60.0,
-        0.0,
-        99960.0,
-        0.0,
-        -60.0,
-        9100000.0,
-        0.0,
-        0.0,
-        1.0
+        60,
+        0,
+        99960,
+        0,
+        -60,
+        9100000,
+        0,
+        0,
+        1
       ],
       "roles": [
         "data"
@@ -645,10 +645,10 @@
       "raster:bands": [
         {
           "data_type": "uint16",
-          "spatial_resolution": 20.0,
+          "spatial_resolution": 20,
           "statistics": {
-            "minimum": 0.0,
-            "maximum": 3097.0
+            "minimum": 0,
+            "maximum": 3097
           }
         }
       ],
@@ -662,25 +662,25 @@
       ],
       "proj:epsg": 32701,
       "proj:bbox": [
-        99960.0,
-        8990200.0,
-        209760.0,
-        9100000.0
+        99960,
+        8990200,
+        209760,
+        9100000
       ],
       "proj:shape": [
         5490,
         5490
       ],
       "proj:transform": [
-        20.0,
-        0.0,
-        99960.0,
-        0.0,
-        -20.0,
-        9100000.0,
-        0.0,
-        0.0,
-        1.0
+        20,
+        0,
+        99960,
+        0,
+        -20,
+        9100000,
+        0,
+        0,
+        1
       ],
       "roles": [
         "data"
@@ -694,10 +694,10 @@
       "raster:bands": [
         {
           "data_type": "uint16",
-          "spatial_resolution": 20.0,
+          "spatial_resolution": 20,
           "statistics": {
-            "minimum": 0.0,
-            "maximum": 2852.0
+            "minimum": 0,
+            "maximum": 2852
           }
         }
       ],
@@ -711,25 +711,25 @@
       ],
       "proj:epsg": 32701,
       "proj:bbox": [
-        99960.0,
-        8990200.0,
-        209760.0,
-        9100000.0
+        99960,
+        8990200,
+        209760,
+        9100000
       ],
       "proj:shape": [
         5490,
         5490
       ],
       "proj:transform": [
-        20.0,
-        0.0,
-        99960.0,
-        0.0,
-        -20.0,
-        9100000.0,
-        0.0,
-        0.0,
-        1.0
+        20,
+        0,
+        99960,
+        0,
+        -20,
+        9100000,
+        0,
+        0,
+        1
       ],
       "roles": [
         "data"
@@ -743,10 +743,10 @@
       "raster:bands": [
         {
           "data_type": "uint16",
-          "spatial_resolution": 20.0,
+          "spatial_resolution": 20,
           "statistics": {
-            "minimum": 0.0,
-            "maximum": 3241.0
+            "minimum": 0,
+            "maximum": 3241
           }
         }
       ],
@@ -760,25 +760,25 @@
       ],
       "proj:epsg": 32701,
       "proj:bbox": [
-        99960.0,
-        8990200.0,
-        209760.0,
-        9100000.0
+        99960,
+        8990200,
+        209760,
+        9100000
       ],
       "proj:shape": [
         5490,
         5490
       ],
       "proj:transform": [
-        20.0,
-        0.0,
-        99960.0,
-        0.0,
-        -20.0,
-        9100000.0,
-        0.0,
-        0.0,
-        1.0
+        20,
+        0,
+        99960,
+        0,
+        -20,
+        9100000,
+        0,
+        0,
+        1
       ],
       "roles": [
         "data"
@@ -786,9 +786,9 @@
     }
   },
   "bbox": [
-    -180.0,
+    -180,
     -8.368483898145028,
-    180.0,
+    180,
     -8.125870149712362
   ],
   "stac_extensions": [

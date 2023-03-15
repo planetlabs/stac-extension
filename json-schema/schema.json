@@ -1029,7 +1029,7 @@
               "const": "usgs"
             },
             "platform": {
-              "pattern": "Landsat8"
+              "const": "Landsat8"
             }
           }
         },
@@ -1039,7 +1039,7 @@
               "const": "usgs"
             },
             "platform": {
-              "pattern": "Terra"
+              "pattern": "Terra|Aqua"
             }
           }
         },
@@ -1079,7 +1079,7 @@
               "const": "esa"
             },
             "platform": {
-              "pattern": "SSC\\d+"
+              "pattern": "Sentinel\\S+"
             }
           }
         },
@@ -1089,7 +1089,7 @@
               "const": "skysat"
             },
             "platform": {
-              "pattern": "Sentinel\\S+"
+              "pattern": "SSC\\d+"
             }
           }
         }

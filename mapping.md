@@ -13,16 +13,16 @@ STAC Item properties (if not stated otherwise) and lists for which `pl:item_type
 | *pl:black_fill*                         | black_fill                 | ✓ |   | ✓ | ✓ |   |   |   |   | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | -                                       | camera_id                  |   |   |   |   |   | ✓ | ✓ |   |   |   |   |   |   |   |
 | collection (top-level)                  | catalog_id                 |   |   | ✓ | ✓ |   |   |   |   |   |   |   |   |   |   |
-| -                                       | clear_confidence_percent   | ✓ | ✓ |   |   | ✓ | ✓ |   |   |   |   |   |   |   |   | 
+| -                                       | clear_confidence_percent   | ✓ | ✓ |   |   | ✓ | ✓ |   |   |   |   |   |   |   |   |
 | *pl:clear_percent*                      | clear_percent              | ✓ | ✓ |   |   | ✓ | ✓ |   |   |   |   |   |   |   |   |
 | eo:cloud_cover                          | cloud_cover                | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |   | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | -                                       | cloud_percent              | ✓ | ✓ |   |   | ✓ | ✓ |   |   |   |   |   |   |   |   |
 | proj.shape\[1] (assets)                 | columns                    | ✓ |   | ✓ | ✓ |   |   |   | ✓ |   |   |   |   | ✓ | ✓ |
 | proj:epsg (assets)                      | epsg_code                  | ✓ |   | ✓ |   |   |   |   | ✓ |   |   |   |   | ✓ | ✓ |
 | *pl:grid_cell*                          | grid_cell                  | ✓ |   | ✓ |   |   |   |   |   |   |   |   |   |   |   |
-| *pl:ground_control*                     | ground_control             | ✓ | ✓ | ✓ |   |   | ✓ |   |   |   |   |   |   |   |   | 
+| *pl:ground_control*                     | ground_control             | ✓ | ✓ | ✓ |   |   | ✓ |   |   |   |   |   |   |   |   |
 | *pl:ground_control_ratio*               | ground_control_ratio       |   |   |   |   | ✓ |   |   |   |   |   |   |   |   |   |
-| gsd                                     | **gsd**                    | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |   | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |   
+| gsd                                     | **gsd**                    | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |   | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  
 | -                                       | heavy_haze_percent         | ✓ | ✓ |   |   | ✓ | ✓ |   |   |   |   |   |   |   |   |
 | instruments\[0]                         | instrument                 | ✓ | ✓ |   |   |   |   |   | ✓ | ✓ | ✓ | ✓ | ✓ |   | ✓ |
 | *pl:item_type*                          | **item_type**              | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
@@ -39,11 +39,11 @@ STAC Item properties (if not stated otherwise) and lists for which `pl:item_type
 | platform                                | **satellite_id**           | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | -                                       | shadow_percent             |   | ✓ |   |   | ✓ | ✓ |   |   |   |   |   |   |   |   |
 | eo:snow_cover                           | snow_ice_percent           |   | ✓ |   |   | ✓ | ✓ |   |   |   |   |   |   |   |   |
-| *pl:strip_id*                           | strip_id                   | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |   |   |   |   |   |   |   |   
+| *pl:strip_id*                           | strip_id                   | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |   |   |   |   |   |   |   |
 | view:sun_azimuth                        | **sun_azimuth**            | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | view:sun_elevation                      | **sun_elevation**          | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | updated (assets)                        | **updated**                | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | -                                       | usable_data                | ✓ |   | ✓ | ✓ |   |   |   | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| view:off_nadir (absolute value)         | **view_angle**             | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |   
+| view:off_nadir (absolute value)         | **view_angle**             | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | -                                       | visible_confidence_percent | ✓ | ✓ |   |   | ✓ | ✓ |   |   |   |   |   |   |   |   |
 | -                                       | visible_percent            | ✓ | ✓ |   |   | ✓ | ✓ |   |   |   |   |   |   |   |   |

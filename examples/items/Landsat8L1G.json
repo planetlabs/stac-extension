@@ -1,0 +1,189 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "id": "LC82190652018002LGN00",
+  "properties": {
+    "updated": "2022-04-13T20:39:05Z",
+    "created": "2022-04-13T20:39:05Z",
+    "gsd": 30,
+    "constellation": "usgs",
+    "platform": "Landsat8",
+    "instruments": [
+      "OLI_TIRS"
+    ],
+    "eo:cloud_cover": 90.2,
+    "view:off_nadir": 0,
+    "view:sun_azimuth": 122.5,
+    "view:sun_elevation": 58.1,
+    "pl:collection": "2",
+    "pl:data_type": "L1TP",
+    "pl:item_type": "Landsat8L1G",
+    "pl:pixel_resolution": 30,
+    "pl:processed": "2020-09-02T11:20:42Z",
+    "pl:product_id": "LC08_L1TP_219065_20180102_20200902_02_T1",
+    "pl:quality_category": "standard",
+    "pl:usable_data": 0.686,
+    "pl:wrs_path": 219,
+    "pl:wrs_row": 65,
+    "published": "2022-04-13T20:39:05Z",
+    "proj:epsg": null,
+    "datetime": "2018-01-02T13:00:06.942405Z"
+  },
+  "geometry": {
+    "coordinates": [
+      [
+        [
+          -43.59795349975637,
+          -6.187763200391768
+        ],
+        [
+          -41.953040210223655,
+          -6.539147977116791
+        ],
+        [
+          -42.322274594050036,
+          -8.275927456292084
+        ],
+        [
+          -43.97342783396222,
+          -7.920828136404763
+        ],
+        [
+          -43.59795349975637,
+          -6.187763200391768
+        ]
+      ]
+    ],
+    "type": "Polygon"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "./Landsat8L1G_collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "./Landsat8L1G_collection.json",
+      "type": "application/json"
+    }
+  ],
+  "assets": {
+    "LC82190652018002LGN00_metadata_json": {
+      "href": "./LC82190652018002LGN00_metadata.json",
+      "type": "application/json",
+      "roles": [
+        "metadata"
+      ]
+    },
+    "LC82190652018002LGN00_Visual_tif": {
+      "href": "./LC82190652018002LGN00_Visual.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "pl:asset_type": "visual",
+      "pl:bundle_type": "visual",
+      "raster:bands": [
+        {
+          "data_type": "uint8",
+          "spatial_resolution": 30,
+          "statistics": {
+            "minimum": 0,
+            "maximum": 255
+          }
+        },
+        {
+          "data_type": "uint8",
+          "spatial_resolution": 30,
+          "statistics": {
+            "minimum": 0,
+            "maximum": 255
+          }
+        },
+        {
+          "data_type": "uint8",
+          "spatial_resolution": 30,
+          "statistics": {
+            "minimum": 0,
+            "maximum": 255
+          }
+        },
+        {
+          "data_type": "uint8",
+          "spatial_resolution": 30,
+          "statistics": {
+            "minimum": 0,
+            "maximum": 255
+          }
+        }
+      ],
+      "eo:bands": [
+        {
+          "name": "Red",
+          "common_name": "red",
+          "center_wavelength": 0.655,
+          "full_width_half_max": 0.037
+        },
+        {
+          "name": "Green",
+          "common_name": "green",
+          "center_wavelength": 0.561,
+          "full_width_half_max": 0.057
+        },
+        {
+          "name": "Blue",
+          "common_name": "blue",
+          "center_wavelength": 0.482,
+          "full_width_half_max": 0.06
+        },
+        {
+          "name": "Alpha",
+          "description": "Pixel opacity (0: fully transparent; 255: fully opaque)"
+        }
+      ],
+      "proj:epsg": 32623,
+      "proj:bbox": [
+        611985,
+        -916815,
+        840615,
+        -683685
+      ],
+      "proj:shape": [
+        7771,
+        7621
+      ],
+      "proj:transform": [
+        30,
+        0,
+        611985,
+        0,
+        -30,
+        -683685,
+        0,
+        0,
+        1
+      ],
+      "roles": [
+        "data",
+        "visual"
+      ]
+    }
+  },
+  "bbox": [
+    -43.97342783396222,
+    -8.275927456292084,
+    -41.953040210223655,
+    -6.187763200391768
+  ],
+  "stac_extensions": [
+    "https://planetlabs.github.io/stac-extension/v1.0.0-beta.1/schema.json",
+    "https://stac-extensions.github.io/eo/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/view/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v1.0.0/schema.json"
+  ],
+  "collection": "d8416b0d-8afd-44ef-b1ea-826134555ad0: Landsat8L1G"
+}

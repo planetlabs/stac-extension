@@ -1,0 +1,200 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "id": "S1A_IW_GRDH_1SDV_20230108T015013_20230108T015042_046686_05988B_7011",
+  "properties": {
+    "updated": "2023-01-15T08:24:34Z",
+    "created": "2023-01-15T08:24:34Z",
+    "gsd": 10,
+    "constellation": "esa",
+    "platform": "Sentinel-1-A",
+    "instruments": [
+      "SAR-C SAR"
+    ],
+    "pl:abs_orbit_number": 46686,
+    "pl:black_fill": 0,
+    "pl:datatake_id": "366731",
+    "pl:incidence_far": 46.1482,
+    "pl:incidence_near": 30.7401,
+    "pl:item_type": "Sentinel1",
+    "pl:orbit_direction": "ASC",
+    "pl:pixel_resolution": 10,
+    "pl:polarisation_mode": "dual",
+    "pl:quality_category": "standard",
+    "pl:rel_orbit_number": 64,
+    "pl:usable_data": 0,
+    "published": "2023-01-15T08:24:34Z",
+    "proj:epsg": null,
+    "sar:frequency_band": "C",
+    "sar:instrument_mode": "IW",
+    "sar:observation_direction": "right",
+    "sar:polarizations": [
+      "VV",
+      "VH"
+    ],
+    "sar:product_type": "GRD",
+    "datetime": "2023-01-08T01:50:27.080000Z"
+  },
+  "geometry": {
+    "coordinates": [
+      [
+        [
+          [
+            -118.393974,
+            32.019535
+          ],
+          [
+            -115.714203,
+            32.427193
+          ],
+          [
+            -116.061676,
+            34.172523
+          ],
+          [
+            -118.795494,
+            33.767479
+          ],
+          [
+            -118.393974,
+            32.019535
+          ]
+        ]
+      ]
+    ],
+    "type": "MultiPolygon"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "./Sentinel1_collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "./Sentinel1_collection.json",
+      "type": "application/json"
+    }
+  ],
+  "assets": {
+    "S1A_IW_GRDH_1SDV_20230108T015013_20230108T015042_046686_05988B_7011_metadata_json": {
+      "href": "./S1A_IW_GRDH_1SDV_20230108T015013_20230108T015042_046686_05988B_7011_metadata.json",
+      "type": "application/json",
+      "roles": [
+        "metadata"
+      ]
+    },
+    "S1A_IW_GRDH_1SDV_20230108T015013_20230108T015042_046686_05988B_7011_ortho_analytic_vh_tif": {
+      "href": "./S1A_IW_GRDH_1SDV_20230108T015013_20230108T015042_046686_05988B_7011_ortho_analytic_vh.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "pl:asset_type": "ortho_analytic_vh",
+      "pl:bundle_type": "analytic",
+      "raster:bands": [
+        {
+          "nodata": 0,
+          "data_type": "uint16",
+          "spatial_resolution": 10,
+          "statistics": {
+            "minimum": 2,
+            "maximum": 65535
+          }
+        }
+      ],
+      "eo:bands": [
+        {
+          "name": "VH Polarisation"
+        }
+      ],
+      "proj:epsg": 32611,
+      "proj:bbox": [
+        333720,
+        3543450,
+        620890,
+        3781690
+      ],
+      "proj:shape": [
+        23824,
+        28717
+      ],
+      "proj:transform": [
+        10,
+        0,
+        333720,
+        0,
+        -10,
+        3781690,
+        0,
+        0,
+        1
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "S1A_IW_GRDH_1SDV_20230108T015013_20230108T015042_046686_05988B_7011_ortho_analytic_vv_tif": {
+      "href": "./S1A_IW_GRDH_1SDV_20230108T015013_20230108T015042_046686_05988B_7011_ortho_analytic_vv.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "pl:asset_type": "ortho_analytic_vv",
+      "pl:bundle_type": "analytic",
+      "raster:bands": [
+        {
+          "nodata": 0,
+          "data_type": "uint16",
+          "spatial_resolution": 10,
+          "statistics": {
+            "minimum": 3350,
+            "maximum": 65535
+          }
+        }
+      ],
+      "eo:bands": [
+        {
+          "name": "VV Polarisation"
+        }
+      ],
+      "proj:epsg": 32611,
+      "proj:bbox": [
+        333720,
+        3543450,
+        620890,
+        3781690
+      ],
+      "proj:shape": [
+        23824,
+        28717
+      ],
+      "proj:transform": [
+        10,
+        0,
+        333720,
+        0,
+        -10,
+        3781690,
+        0,
+        0,
+        1
+      ],
+      "roles": [
+        "data"
+      ]
+    }
+  },
+  "bbox": [
+    -118.795494,
+    32.019535,
+    -115.714203,
+    34.172523
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/eo/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/sar/v1.0.0/schema.json"
+  ],
+  "collection": "2a42f7b8-7c70-445a-a20e-cb19628b8110: Sentinel1"
+}

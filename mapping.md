@@ -15,7 +15,7 @@ STAC Item properties (if not stated otherwise) and lists for which `pl:item_type
 | collection (top-level)                  | catalog_id                 |   |   | ✓ | ✓ |   |   |   |   |   |   |   |   |   |   |
 | -                                       | clear_confidence_percent   | ✓ | ✓ |   |   | ✓ | ✓ |   |   |   |   |   |   |   |   |
 | *pl:clear_percent*                      | clear_percent              | ✓ | ✓ |   |   | ✓ | ✓ |   |   |   |   |   |   |   |   |
-| eo:cloud_cover                          | cloud_cover                | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |   | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| eo:cloud_cover                          | cloud_cover                | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |   | ✓ | ✓ | ✓ | ✓ | ✓ |   | ✓ |
 | -                                       | cloud_percent              | ✓ | ✓ |   |   | ✓ | ✓ |   |   |   |   |   |   |   |   |
 | proj.shape\[1] (assets)                 | columns                    | ✓ |   | ✓ | ✓ |   |   |   | ✓ |   |   |   |   | ✓ | ✓ |
 | proj:epsg (assets)                      | epsg_code                  | ✓ |   | ✓ |   |   |   |   | ✓ |   |   |   |   | ✓ | ✓ |

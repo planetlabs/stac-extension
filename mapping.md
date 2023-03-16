@@ -44,6 +44,6 @@ STAC Item properties (if not stated otherwise) and lists for which `pl:item_type
 | view:sun_elevation                      | **sun_elevation**          | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | updated (assets)                        | **updated**                | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | -                                       | usable_data                | ✓ |   | ✓ | ✓ |   |   |   | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| view:off_nadir (absolute value)         | **view_angle**             | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| view:off_nadir (absolute value)         | **view_angle**             | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |   | ✓ |
 | -                                       | visible_confidence_percent | ✓ | ✓ |   |   | ✓ | ✓ |   |   |   |   |   |   |   |   |
 | -                                       | visible_percent            | ✓ | ✓ |   |   | ✓ | ✓ |   |   |   |   |   |   |   |   |

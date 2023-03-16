@@ -134,11 +134,18 @@ The following specifications are relevant here:
 
 | Field Name     | PSOrthoTile | PSScene | REOrthoTile | REScene | SkySatCollect | SkySatScene | SkySatVideo | Landsat8L1G | M(O/Y)D09G(A/Q) | Sentinel1 | Sentinel2L1C |
 | -------------- | ----------- | ------- | ----------- | ------- | ------------- | ----------- | ----------- | ----------- | --------------- | --------- | ------------ |
-| instruments    | ✓ | ✓ |   |   |   |   |   | ✓ | ✓ |   | ✓ |
-| gsd            | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |   | ✓ | ✓ | ✓ | ✓ |
-| eo:cloud_cover | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |   | ✓ | ✓ | ✓ | ✓ |
-| eo:snow_cover  |   | ✓ |   |   | ✓ | ✓ |   |   |   |   |   |
-| view:azimuth   | ✓ | ✓ |   |   | ✓ | ✓ | ✓ |   |   |   |   |
+| instruments               | ✓ | ✓ |   |   |   |   |   | ✓ | ✓ |   | ✓ |
+| gsd                       | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |   | ✓ | ✓ | ✓ | ✓ |
+| eo:cloud_cover            | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |   | ✓ | ✓ |   | ✓ |
+| eo:snow_cover             |   | ✓ |   |   | ✓ | ✓ |   |   |   |   |   |
+| view:azimuth              | ✓ | ✓ |   |   | ✓ | ✓ | ✓ |   |   |   |   |
+| view:sun_azimuth          | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| view:sun_elevation        | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| sar:frequency_band        |   |   |   |   |   |   |   |   |   | ✓ |   |
+| sar:instrument_mode       |   |   |   |   |   |   |   |   |   | ✓ |   |
+| sar:observation_direction |   |   |   |   |   |   |   |   |   | ✓ |   |
+| sar:polarizations         |   |   |   |   |   |   |   |   |   | ✓ |   |
+| sar:product_type          |   |   |   |   |   |   |   |   |   | ✓ |   |
 
 #### constellation
 
@@ -237,6 +244,9 @@ The following specifications are relevant here:
 - [STAC Projection Extension](https://github.com/stac-extensions/projection) (v1.1.0 or later)
 - [STAC Raster Extension](https://github.com/stac-extensions/raster) (v1.0.0 or later)
 - [STAC Timestamps Extension](https://github.com/stac-extensions/timestamps) (v1.1.0 or later)
+
+For Sentinel1
+- [STAC SAR Extension](https://github.com/stac-extensions/sar) (v1.0.0 or later)
 
 | Field Name   | Type        | Description |
 | ------------ | ----------- | ----------- |

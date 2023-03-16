@@ -12,7 +12,6 @@
       "SAR-C SAR"
     ],
     "pl:abs_orbit_number": 46686,
-    "pl:antenna_look_direction": "right",
     "pl:black_fill": 0,
     "pl:datatake_id": "366731",
     "pl:incidence_far": 46.1482,
@@ -20,14 +19,20 @@
     "pl:item_type": "Sentinel1",
     "pl:orbit_direction": "ASC",
     "pl:pixel_resolution": 10,
-    "pl:polarisation_channels": "VV,VH",
     "pl:polarisation_mode": "dual",
     "pl:quality_category": "standard",
     "pl:rel_orbit_number": 64,
-    "pl:sensor_mode": "IW",
     "pl:usable_data": 0,
     "published": "2023-01-15T08:24:34Z",
     "proj:epsg": null,
+    "sar:frequency_band": "C",
+    "sar:instrument_mode": "IW",
+    "sar:observation_direction": "right",
+    "sar:polarizations": [
+      "VV",
+      "VH"
+    ],
+    "sar:product_type": "GRD",
     "datetime": "2023-01-08T01:50:27.080000Z"
   },
   "geometry": {
@@ -188,7 +193,8 @@
   "stac_extensions": [
     "https://stac-extensions.github.io/raster/v1.1.0/schema.json",
     "https://stac-extensions.github.io/eo/v1.0.0/schema.json",
-    "https://stac-extensions.github.io/projection/v1.0.0/schema.json"
+    "https://stac-extensions.github.io/projection/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/sar/v1.0.0/schema.json"
   ],
   "collection": "2a42f7b8-7c70-445a-a20e-cb19628b8110: Sentinel1"
 }

@@ -437,7 +437,11 @@
                     "pl:black_fill",
                     "pl:pixel_resolution",
                     "pl:quality_category",
-                    "eo:cloud_cover",
+                    "sar:frequency_band",
+                    "sar:instrument_mode",
+                    "sar:observation_direction",
+                    "sar:polarizations",
+                    "sar:product_type",
                     "gsd"
                   ],
                   "properties": {

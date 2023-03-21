@@ -250,8 +250,8 @@ For Sentinel1
 
 | Field Name   | Type        | Description |
 | ------------ | ----------- | ----------- |
-| updated      | string      | **REQUIRED**. Time of data publication as defined in common metadata. |
-| published    | string      | **REQUIRED**. Time of data publication as defined in the Timestamps extension. |
+| published    | string      | **REQUIRED**. Time of data publication as defined in the STAC Timestamps Extension. |
+| updated      | string      | **REQUIRED**. Time of most recent data update as defined in STAC Common Metadata. |
 | proj:espg    | integer     | The EPSG code as defined in the Projection extension. |
 | proj:shape   | \[integer\] | The number of rows and cols in the image as defined in the Projection extension. |
 | raster:bands | \[[Raster Band Object](https://github.com/stac-extensions/raster#raster-band-object)] | The bands of the file with a `spatial_resolution`. |

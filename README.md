@@ -34,7 +34,7 @@ Generally, the deprecated item types `PSScene3Band` and `PSScene4Band` are not s
 
 **Important links for this extension:**
 - Examples:
-  - [Browse in STAC Browser](https://radiantearth.github.io/stac-browser/#/external/raw.githubusercontent.com/m-mohr/planet-stac-extension/main/examples/catalog.json)
+  - [Browse in STAC Browser](https://radiantearth.github.io/stac-browser/#/external/raw.githubusercontent.com/planetlabs/stac-extension/main/examples/catalog.json)
   - PlanetScope:
     - [PSScene Item](examples/items/psscene.json)
     - [PSOrthoTile Item](examples/items/psorthotile.json)

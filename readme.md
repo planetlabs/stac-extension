@@ -14,15 +14,15 @@ The fields defined here are mostly mapped directly from the Item Properties defi
 **The following item types are covered by this extension:**
 
 - PlanetScope:
-  - [PSOrthoTile](https://developers.planet.com/docs/data/psorthotile/)
-  - [PSScene](https://developers.planet.com/docs/data/psscene/)
+  - [`PSOrthoTile`](https://developers.planet.com/docs/data/psorthotile/)
+  - [`PSScene`](https://developers.planet.com/docs/data/psscene/)
 - RapidEye:
-  - [REOrthoTile](https://developers.planet.com/docs/data/reorthotile/)
-  - [REScene](https://developers.planet.com/docs/data/rescene/)
+  - [`REOrthoTile`](https://developers.planet.com/docs/data/reorthotile/)
+  - [`REScene`](https://developers.planet.com/docs/data/rescene/)
 - SkySat:
-  - [SkySatCollect](https://developers.planet.com/docs/data/skysatcollect/)
-  - [SkySatScene](https://developers.planet.com/docs/data/skysatscene/)
-  - [SkySatVideo](https://developers.planet.com/docs/data/skysatvideo/)
+  - [`SkySatCollect`](https://developers.planet.com/docs/data/skysatcollect/)
+  - [`SkySatScene`](https://developers.planet.com/docs/data/skysatscene/)
+  - [`SkySatVideo`](https://developers.planet.com/docs/data/skysatvideo/)
 - Landsat
   - [`Landsat8L1G`](https://developers.planet.com/docs/data/landsat-8/)
 - MODIS

@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://planetlabs.github.io/stac-extension/v1.0.0-beta.1/schema.json#",
+  "$id": "https://planetlabs.github.io/stac-extension/{{version}}/schema.json#",
   "title": "Planet Labs Extension",
   "description": "STAC Planet Labs Extension for STAC Items and STAC Collections. Validates the fields, doesn't require specific assets to be present.",
   "type": "object",
@@ -12,7 +12,7 @@
     "stac_extensions": {
       "type": "array",
       "contains": {
-        "const": "https://planetlabs.github.io/stac-extension/v1.0.0-beta.1/schema.json"
+        "const": "https://planetlabs.github.io/stac-extension/{{version}}/schema.json"
       }
     }
   },

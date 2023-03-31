@@ -1,17 +1,18 @@
-# Planet Labs Extension Specification
+# Planet Labs STAC Extension
 
 - **Title:** Planet Labs
-- **Identifier:** <https://planetlabs.github.io/stac-extension/{{version}}/schema.json>
+- **Identifier:** <https://planetlabs.github.io/stac-extension/{{version}}/schema.json> (see the [releases page](https://github.com/planetlabs/stac-extension/releases) for a list of published versions)
 - **Field Name Prefix:** pl
 - **Scope:** Item
 - **Extension [Maturity Classification](https://github.com/radiantearth/stac-spec/tree/master/extensions/README.md#extension-maturity):** Proposal
 - **Owner**: @cholmes @tschaub @m-mohr
 
-This document explains the Planet Labs Extension to the [SpatioTemporal Asset Catalog](https://github.com/radiantearth/stac-spec) (STAC) specification. The extension defines fields specific to the products offered by Planet Labs, primarily for PlanetScope, RapidEye and SkySat.
+This document describes the Planet Labs Extension to the [SpatioTemporal Asset Catalog](https://github.com/radiantearth/stac-spec) (STAC) specification. The extension defines fields specific to the products offered by Planet Labs.
 
-The fields defined here are usually just a 1:1 mapping from the Item Properties defined in the [Planet API](https://developers.planet.com/docs/apis/data/items-assets/). If possible the fields are mapped to commonly used fields in STAC, including a variety of extensions (e.g. eo, view). See [Field mapping and scope](mapping.md) for a table that maps between Planet Item Properties and STAC fields. Sometimes fields don't map 1:1 and need a slight conversion, which will be mentioned in the description for each field here. It also gives an overview over the fields that are available for the individual item types.
+The fields defined here are mostly mapped directly from the Item Properties defined in the [Planet API](https://developers.planet.com/docs/apis/data/items-assets/). If possible the fields are mapped to commonly used fields in STAC, including a variety of extensions (e.g. eo, view). See [Field mapping and scope](mapping.md) for a table that maps between Planet Item Properties and STAC fields. Sometimes fields don't map 1:1 and need a slight conversion, which will be mentioned in the description for each field here. It also gives an overview over the fields that are available for the individual item types.
 
 **The following item types are covered by this extension:**
+
 - PlanetScope:
   - [PSOrthoTile](https://developers.planet.com/docs/data/psorthotile/)
   - [PSScene](https://developers.planet.com/docs/data/psscene/)
@@ -22,10 +23,19 @@ The fields defined here are usually just a 1:1 mapping from the Item Properties 
   - [SkySatCollect](https://developers.planet.com/docs/data/skysatcollect/)
   - [SkySatScene](https://developers.planet.com/docs/data/skysatscene/)
   - [SkySatVideo](https://developers.planet.com/docs/data/skysatvideo/)
+- Landsat
+- Landsat
+  - [`Landsat8L1G`](https://developers.planet.com/docs/data/landsat-8/)
+- MODIS
+  - [`MOD09GA`, `MYD09GA`, `MOD09GQ`, `MYD09GQ`](https://developers.planet.com/apis/orders/product-bundles-reference/)
+- Sentinel
+  - [`Sentinel1`](https://developers.planet.com/apis/orders/product-bundles-reference/)
+  - [`Sentinel2L1C`](https://developers.planet.com/docs/data/sentinel2l1c/)
 
-Generally, the deprecated item types `PSScene3Band` and `PSScene4Band` are not supported and will not be validated.
+The deprecated item types `PSScene3Band` and `PSScene4Band` are not supported and will not be validated.
 
 **Important links for this extension:**
+
 - Examples:
   - [Browse in STAC Browser](https://radiantearth.github.io/stac-browser/#/external/raw.githubusercontent.com/planetlabs/stac-extension/main/examples/catalog.json)
   - PlanetScope:
@@ -44,8 +54,8 @@ Generally, the deprecated item types `PSScene3Band` and `PSScene4Band` are not s
 The fields in the tables below can be used in these parts of STAC documents:
 - [ ] Catalogs
 - [ ] Collections
-- [x] Item Properties (incl. Summaries in Collections)
-- [ ] Assets (for both Collections and Items, incl. Item Asset Definitions in Collections)
+- [x] Item Properties (including Summaries in Collections)
+- [ ] Assets (for both Collections and Items, including Item Asset Definitions in Collections)
 - [ ] Links
 
 ### Planet-specific

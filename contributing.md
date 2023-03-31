@@ -2,11 +2,11 @@
 
 All contributions are subject to the [STAC Specification Code of Conduct](https://github.com/radiantearth/stac-spec/blob/master/CODE_OF_CONDUCT.md). For contributions, please follow the [STAC specification contributing guide](https://github.com/radiantearth/stac-spec/blob/master/CONTRIBUTING.md) Instructions for running tests are copied here for convenience.
 
+If you spot a bug or have an idea for a feature, please [create an issue](https://github.com/planetlabs/stac-extension/issues).  For simple fixes or features, you can [create a pull request](https://github.com/planetlabs/stac-extension/pulls), but it is a good idea to have discussion on an issue before sinking a lot of time into a pull request.
+
 ## Running tests
 
-The same checks that run as checks on PR's are part of the repository and can be run locally to verify that changes are valid. To run tests locally, you'll need `npm`, which is a standard part of any [node.js installation](https://nodejs.org/en/download/).
-
-First you'll need to install everything with npm once. Just navigate to the root of this repository and on your command line run:
+Pull requests have to pass the tests before they can be merged. You can run the same tests locally with [Node](https://nodejs.org/).  First you'll need to install everything with `npm`. Navigate to the root of the repository and on your command line run:
 
 ```bash
 npm install
@@ -17,8 +17,6 @@ Then to check markdown formatting and test the examples against the JSON schema,
 ```bash
 npm test
 ```
-
-This will spit out the same texts that you see online, and you can then go and fix your markdown or examples.
 
 If the tests reveal formatting problems with the examples, you can fix them with:
 

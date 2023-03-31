@@ -1,22 +1,15 @@
 # Planet Labs Extension Specification
 
 - **Title:** Planet Labs
-- **Identifier:** <https://planetlabs.github.io/stac-extension/v1.0.0-beta.1/schema.json>
+- **Identifier:** <https://planetlabs.github.io/stac-extension/{{version}}/schema.json>
 - **Field Name Prefix:** pl
 - **Scope:** Item
 - **Extension [Maturity Classification](https://github.com/radiantearth/stac-spec/tree/master/extensions/README.md#extension-maturity):** Proposal
 - **Owner**: @cholmes @tschaub @m-mohr
 
-This document explains the Planet Labs Extension to the
-[SpatioTemporal Asset Catalog](https://github.com/radiantearth/stac-spec) (STAC) specification.
-The extension defines fields specific to the products offered by Planet Labs, primarily for PlanetScope, RapidEye and SkySat.
+This document explains the Planet Labs Extension to the [SpatioTemporal Asset Catalog](https://github.com/radiantearth/stac-spec) (STAC) specification. The extension defines fields specific to the products offered by Planet Labs, primarily for PlanetScope, RapidEye and SkySat.
 
-The fields defined here are usually just a 1:1 mapping from the Item Properties defined in the
-[Planet API](https://developers.planet.com/docs/apis/data/items-assets/).
-If possible the fields are mapped to commonly used fields in STAC, including a variety of extensions (e.g. eo, view).
-See [Field mapping and scope](mapping.md) for a table that maps between Planet Item Properties and STAC fields.
-Sometimes fields don't map 1:1 and need a slight conversion, which will be mentioned in the description for each field here.
-It also gives an overview over the fields that are available for the individual item types.
+The fields defined here are usually just a 1:1 mapping from the Item Properties defined in the [Planet API](https://developers.planet.com/docs/apis/data/items-assets/). If possible the fields are mapped to commonly used fields in STAC, including a variety of extensions (e.g. eo, view). See [Field mapping and scope](mapping.md) for a table that maps between Planet Item Properties and STAC fields. Sometimes fields don't map 1:1 and need a slight conversion, which will be mentioned in the description for each field here. It also gives an overview over the fields that are available for the individual item types.
 
 **The following item types are covered by this extension:**
 - PlanetScope:
@@ -44,8 +37,7 @@ Generally, the deprecated item types `PSScene3Band` and `PSScene4Band` are not s
   - SkySat:
     - [SkySatCollect Item](examples/items/skysatcollect.json)
     - [SkySatScene Item](examples/items/skysatscene.json)
-- [JSON Schema](json-schema/schema.json)
-- [Changelog](./CHANGELOG.md)
+- [JSON Schema](./schema.json)
 
 ## Item Properties Fields
 
@@ -193,11 +185,7 @@ Please note that the `instruments` field is always specified as an array.
 
 #### view:off_nadir
 
-This field is basically the `view_angle` field in the Planet API.
-The values are equal for SkySat and Planetscope, but for RapidEye they can also be negative
-(positive numbers denote east, negative numbers denote west).
-So the `view_angle` as defined by the Planet API maps 1:1 to `view:off_nadir`, but
-**for RapidEye you have to use the absolute value of `view_angle`**.
+This field is basically the `view_angle` field in the Planet API. The values are equal for SkySat and Planetscope, but for RapidEye they can also be negative (positive numbers denote east, negative numbers denote west). So the `view_angle` as defined by the Planet API maps 1:1 to `view:off_nadir`, but **for RapidEye you have to use the absolute value of `view_angle`**.
 
 ## Asset Fields
 
@@ -234,12 +222,11 @@ The allowed asset types can be found here per item type:
 - Landsat, Sentinel, MODIS
   - These asset types aren't documented as much on the Planet side, but can be explored [here](https://developers.planet.com/apis/orders/product-bundles-reference/) or in the schema
 
-The [JSON Schema](./json-schema/schema.json) also provides a full list of all allowed values.
+The [JSON Schema](./schema.json) also provides a full list of all allowed values.
 
 ### Other Extensions and Specifications
 
-Additionally, this extension uses and partially requires additional fields from other specifications/ extensions.
-The following specifications are relevant here:
+Additionally, this extension uses and partially requires additional fields from other specifications/ extensions. The following specifications are relevant here:
 - [STAC Common Metadata](https://github.com/radiantearth/stac-spec/blob/master/item-spec/common-metadata.md)
 - [STAC Projection Extension](https://github.com/stac-extensions/projection) (v1.1.0 or later)
 - [STAC Raster Extension](https://github.com/stac-extensions/raster) (v1.0.0 or later)
@@ -256,12 +243,9 @@ For Sentinel1
 | proj:shape   | \[integer\] | The number of rows and cols in the image as defined in the Projection extension. |
 | raster:bands | \[[Raster Band Object](https://github.com/stac-extensions/raster#raster-band-object)] | The bands of the file with a `spatial_resolution`. |
 
-These fields should only be provided for actual data files (e.g. COG), not for metadata (e.g. XML).
-Currently, the JSON Schema does not fully validate these fields.
+These fields should only be provided for actual data files (e.g. COG), not for metadata (e.g. XML). Currently, the JSON Schema does not fully validate these fields.
 
-The fields defined in the [Projection extension](https://github.com/stac-extensions/projection#fields)
-can either be used at the Asset-level or go into the Item Properties.
-To avoid ambiguities it is recommended to have them at the Asset-level, but both is allowed.
+The fields defined in the [Projection extension](https://github.com/stac-extensions/projection#fields) can either be used at the Asset-level or go into the Item Properties. To avoid ambiguities it is recommended to have them at the Asset-level, but both is allowed.
 
 **Additional REQUIRED fields per `pl:item_type`:**
 
@@ -275,39 +259,7 @@ To avoid ambiguities it is recommended to have them at the Asset-level, but both
 
 ## Providers
 
-For the `providers` field in a STAC Collection (or in the STAC Item Properties), it is recommended
-to provide the following details for Planet:
+For the `providers` field in a STAC Collection (or in the STAC Item Properties), it is recommended to provide the following details for Planet:
 
 - Name: `Planet Labs PBC`
 - Roles: at least `producer` and `licensor`
-
-## Contributing
-
-All contributions are subject to the
-[STAC Specification Code of Conduct](https://github.com/radiantearth/stac-spec/blob/master/CODE_OF_CONDUCT.md).
-For contributions, please follow the
-[STAC specification contributing guide](https://github.com/radiantearth/stac-spec/blob/master/CONTRIBUTING.md) Instructions
-for running tests are copied here for convenience.
-
-### Running tests
-
-The same checks that run as checks on PR's are part of the repository and can be run locally to verify that changes are valid. 
-To run tests locally, you'll need `npm`, which is a standard part of any [node.js installation](https://nodejs.org/en/download/).
-
-First you'll need to install everything with npm once. Just navigate to the root of this repository and on 
-your command line run:
-```bash
-npm install
-```
-
-Then to check markdown formatting and test the examples against the JSON schema, you can run:
-```bash
-npm test
-```
-
-This will spit out the same texts that you see online, and you can then go and fix your markdown or examples.
-
-If the tests reveal formatting problems with the examples, you can fix them with:
-```bash
-npm run format-examples
-```

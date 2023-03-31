@@ -177,7 +177,7 @@
     33.6200114123297
   ],
   "stac_extensions": [
-    "https://planetlabs.github.io/stac-extension/v1.0.0-beta.1/schema.json",
+    "https://planetlabs.github.io/stac-extension/{{version}}/schema.json",
     "https://stac-extensions.github.io/eo/v1.0.0/schema.json",
     "https://stac-extensions.github.io/view/v1.0.0/schema.json",
     "https://stac-extensions.github.io/projection/v1.0.0/schema.json",

@@ -24,7 +24,6 @@ The fields defined here are mostly mapped directly from the Item Properties defi
   - [SkySatScene](https://developers.planet.com/docs/data/skysatscene/)
   - [SkySatVideo](https://developers.planet.com/docs/data/skysatvideo/)
 - Landsat
-- Landsat
   - [`Landsat8L1G`](https://developers.planet.com/docs/data/landsat-8/)
 - MODIS
   - [`MOD09GA`, `MYD09GA`, `MOD09GQ`, `MYD09GQ`](https://developers.planet.com/apis/orders/product-bundles-reference/)

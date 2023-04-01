@@ -10,8 +10,6 @@ import {hideBin} from 'yargs/helpers';
  * @typedef {Object} Options
  * @property {string} token The bearer token.
  * @property {string} tag The tag.
- * @property {boolean} draft Create a draft release.
- * @property {boolean} notes Generate release notes.
  */
 
 const owner = 'planetlabs';
@@ -28,8 +26,8 @@ async function createRelease(options) {
     owner,
     repo,
     tag_name: options.tag,
-    generate_release_notes: options.notes,
-    draft: options.draft,
+    generate_release_notes: true,
+    draft: true,
   });
 
   const schemaPath = fileURLToPath(new URL('../schema.json', import.meta.url));
@@ -61,11 +59,6 @@ if (esMain(import.meta)) {
       type: 'string',
     })
     .demandOption('tag')
-    .option('notes', {
-      describe: 'Generate release notes',
-      type: 'boolean',
-      default: true,
-    })
     .parse();
 
   createRelease(options).catch(err => {

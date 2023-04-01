@@ -26,6 +26,8 @@ jobs:
         run: npm ci
 
       - name: Build Schema and Docs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm run build
 
       - name: Upload Artifact

@@ -1,7 +1,7 @@
 # Planet STAC Extension
 
 - **Title:** Planet Labs
-- **Identifier:** <https://planetlabs.github.io/stac-extension/{{version}}/schema.json> (see the [releases page](https://github.com/planetlabs/stac-extension/releases) for a list of published versions)
+- **Identifier:** `https://planetlabs.github.io/stac-extension/{{version}}/schema.json` (see the [releases page](https://planetlabs.github.io/stac-extension/) for a list of published versions)
 - **Field Name Prefix:** pl
 - **Scope:** Item
 - **Extension [Maturity Classification](https://github.com/radiantearth/stac-spec/tree/master/extensions/README.md#extension-maturity):** Proposal

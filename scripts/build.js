@@ -68,14 +68,54 @@ async function* eachRelease() {
   }
 }
 
+const indexTemplate = `<!DOCTYPE html>
+<html>
+  <head>
+    <title>Planet STAC Extension</title>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <style>
+      :root {
+        --accent: #007f99;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --accent: #007f99;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Planet STAC Extension</h1>
+    <p>
+      Find the JSON Schema and specification documents for the most recent releases below.
+    </p>
+    <ul>
+      {{#releases}}
+      <li>
+        {{tag}} (<a href="https://github.com/planetlabs/stac-extension/releases/tag/{{tag}}">release notes</a>):
+        <a href="./{{tag}}/schema.json">schema</a> and <a href="https://github.com/planetlabs/stac-extension/blob/{{tag}}/readme.md">specification</a>
+      </li>
+      {{/releases}}
+    </ul>
+    <footer>
+      <a href="https://github.com/planetlabs/stac-extension">GitHub repository</a>
+    </footer>
+  </body>
+</html>
+`;
+
 async function build({destDir}) {
+  const releases = [];
   for await (const release of eachRelease()) {
+    releases.push(release);
     const context = {version: release.tag};
     const schema = Mustache.render(release.schema, context);
     const destPath = path.join(destDir, release.tag, 'schema.json');
     await fse.ensureDir(path.dirname(destPath));
     await fse.writeFile(destPath, schema);
   }
+  const index = Mustache.render(indexTemplate, {releases});
+  fse.writeFile(path.join(destDir, 'index.html'), index);
 }
 
 if (esMain(import.meta)) {

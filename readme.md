@@ -1,4 +1,4 @@
-# Planet Labs STAC Extension
+# Planet STAC Extension
 
 - **Title:** Planet Labs
 - **Identifier:** <https://planetlabs.github.io/stac-extension/{{version}}/schema.json> (see the [releases page](https://github.com/planetlabs/stac-extension/releases) for a list of published versions)

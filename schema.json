@@ -62,6 +62,10 @@
                       "$ref": "#/definitions/fields/pl:pixel_resolution"
                     }
                   },
+                  "patternProperties": {
+                    "^(?!pl:)": {}
+                  },
+                  "additionalProperties": false,
                   "allOf": [
                     {
                       "$ref": "#/definitions/properties/common_metadata/landsat"
@@ -101,6 +105,10 @@
                       "$ref": "#/definitions/fields/pl:pixel_resolution"
                     }
                   },
+                  "patternProperties": {
+                    "^(?!pl:)": {}
+                  },
+                  "additionalProperties": false,
                   "allOf": [
                     {
                       "$ref": "#/definitions/properties/common_metadata/modis"
@@ -140,6 +148,10 @@
                       "$ref": "#/definitions/fields/pl:pixel_resolution"
                     }
                   },
+                  "patternProperties": {
+                    "^(?!pl:)": {}
+                  },
+                  "additionalProperties": false,
                   "allOf": [
                     {
                       "$ref": "#/definitions/properties/common_metadata/modis"
@@ -179,6 +191,10 @@
                       "$ref": "#/definitions/fields/pl:pixel_resolution"
                     }
                   },
+                  "patternProperties": {
+                    "^(?!pl:)": {}
+                  },
+                  "additionalProperties": false,
                   "allOf": [
                     {
                       "$ref": "#/definitions/properties/common_metadata/modis"
@@ -218,6 +234,10 @@
                       "$ref": "#/definitions/fields/pl:pixel_resolution"
                     }
                   },
+                  "patternProperties": {
+                    "^(?!pl:)": {}
+                  },
+                  "additionalProperties": false,
                   "allOf": [
                     {
                       "$ref": "#/definitions/properties/common_metadata/modis"
@@ -279,6 +299,10 @@
                       "$ref": "#/definitions/fields/pl:quality_category"
                     }
                   },
+                  "patternProperties": {
+                    "^(?!pl:)": {}
+                  },
+                  "additionalProperties": false,
                   "allOf": [
                     {
                       "$ref": "#/definitions/properties/common_metadata/ps"
@@ -333,6 +357,10 @@
                       "$ref": "#/definitions/fields/pl:quality_category"
                     }
                   },
+                  "patternProperties": {
+                    "^(?!pl:)": {}
+                  },
+                  "additionalProperties": false,
                   "allOf": [
                     {
                       "$ref": "#/definitions/properties/common_metadata/ps"
@@ -380,6 +408,10 @@
                       "$ref": "#/definitions/fields/pl:pixel_resolution"
                     }
                   },
+                  "patternProperties": {
+                    "^(?!pl:)": {}
+                  },
+                  "additionalProperties": false,
                   "allOf": [
                     {
                       "$ref": "#/definitions/properties/common_metadata/re"
@@ -415,6 +447,10 @@
                       "$ref": "#/definitions/fields/pl:black_fill"
                     }
                   },
+                  "patternProperties": {
+                    "^(?!pl:)": {}
+                  },
+                  "additionalProperties": false,
                   "allOf": [
                     {
                       "$ref": "#/definitions/properties/common_metadata/re"
@@ -458,6 +494,10 @@
                       "$ref": "#/definitions/fields/pl:pixel_resolution"
                     }
                   },
+                  "patternProperties": {
+                    "^(?!pl:)": {}
+                  },
+                  "additionalProperties": false,
                   "allOf": [
                     {
                       "$ref": "#/definitions/properties/common_metadata/sentinel"
@@ -497,6 +537,10 @@
                       "$ref": "#/definitions/fields/pl:pixel_resolution"
                     }
                   },
+                  "patternProperties": {
+                    "^(?!pl:)": {}
+                  },
+                  "additionalProperties": false,
                   "allOf": [
                     {
                       "$ref": "#/definitions/properties/common_metadata/sentinel"
@@ -550,6 +594,10 @@
                       "$ref": "#/definitions/fields/pl:pixel_resolution"
                     }
                   },
+                  "patternProperties": {
+                    "^(?!pl:)": {}
+                  },
+                  "additionalProperties": false,
                   "allOf": [
                     {
                       "$ref": "#/definitions/properties/common_metadata/ss"
@@ -603,6 +651,10 @@
                       "$ref": "#/definitions/fields/pl:pixel_resolution"
                     }
                   },
+                  "patternProperties": {
+                    "^(?!pl:)": {}
+                  },
+                  "additionalProperties": false,
                   "allOf": [
                     {
                       "$ref": "#/definitions/properties/common_metadata/ss"
@@ -641,6 +693,10 @@
                       "$ref": "#/definitions/fields/pl:quality_category"
                     }
                   },
+                  "patternProperties": {
+                    "^(?!pl:)": {}
+                  },
+                  "additionalProperties": false,
                   "allOf": [
                     {
                       "$ref": "#/definitions/properties/common_metadata/ss"

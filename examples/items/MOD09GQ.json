@@ -16,15 +16,11 @@
     "view:sun_azimuth": 0,
     "view:sun_elevation": 0,
     "pl:black_fill": 0,
-    "pl:data_type": "L2GL",
     "pl:item_type": "MOD09GQ",
-    "pl:orbit_direction": "ASC",
+    "sat:orbit_state": "ascending",
     "pl:pixel_resolution": 250,
-    "pl:product_generation_time": "2023-01-09T22:12:46Z",
-    "pl:product_version": "6.0.9",
+    "version": "6.0.9",
     "pl:quality_category": "standard",
-    "pl:sgrid_tile_id": "h12v07",
-    "pl:usable_data": 1,
     "published": "2023-01-20T03:11:33Z",
     "proj:epsg": null,
     "datetime": "2023-01-06T11:59:59Z"
@@ -271,7 +267,9 @@
     "https://stac-extensions.github.io/eo/v1.0.0/schema.json",
     "https://stac-extensions.github.io/view/v1.0.0/schema.json",
     "https://stac-extensions.github.io/raster/v1.1.0/schema.json",
-    "https://stac-extensions.github.io/projection/v1.0.0/schema.json"
+    "https://stac-extensions.github.io/projection/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/sat/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json"
   ],
   "collection": "bc2020bb-1333-4a98-9c32-02d9f2d377b3: MOD09GQ"
 }

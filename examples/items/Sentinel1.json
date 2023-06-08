@@ -11,18 +11,15 @@
     "instruments": [
       "SAR-C SAR"
     ],
-    "pl:abs_orbit_number": 46686,
+    "sat:absolute_orbit": 46686,
     "pl:black_fill": 0,
-    "pl:datatake_id": "366731",
     "pl:incidence_far": 46.1482,
     "pl:incidence_near": 30.7401,
     "pl:item_type": "Sentinel1",
-    "pl:orbit_direction": "ASC",
+    "sat:orbit_state": "ascending",
     "pl:pixel_resolution": 10,
-    "pl:polarisation_mode": "dual",
     "pl:quality_category": "standard",
-    "pl:rel_orbit_number": 64,
-    "pl:usable_data": 0,
+    "sat:relative_orbit": 64,
     "published": "2023-01-15T08:24:34Z",
     "proj:epsg": null,
     "sar:frequency_band": "C",
@@ -194,7 +191,8 @@
     "https://stac-extensions.github.io/raster/v1.1.0/schema.json",
     "https://stac-extensions.github.io/eo/v1.0.0/schema.json",
     "https://stac-extensions.github.io/projection/v1.0.0/schema.json",
-    "https://stac-extensions.github.io/sar/v1.0.0/schema.json"
+    "https://stac-extensions.github.io/sar/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/sat/v1.0.0/schema.json"
   ],
   "collection": "2a42f7b8-7c70-445a-a20e-cb19628b8110: Sentinel1"
 }

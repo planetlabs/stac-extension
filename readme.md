@@ -46,6 +46,14 @@ The deprecated item types `PSScene3Band` and `PSScene4Band` are not supported an
   - SkySat:
     - [SkySatCollect Item](examples/items/skysatcollect.json)
     - [SkySatScene Item](examples/items/skysatscene.json)
+  - Others:
+    - [Landsat8L1G Item](examples/items/Landsat8L1G.json)
+    - [MOD09GA Item](examples/items/MOD09GA.json)
+    - [MOD09GQ Item](examples/items/MOD09GQ.json)
+    - [MYD09GA Item](examples/items/MYD09GA.json)
+    - [MYD09GQ Item](examples/items/MYD09GQ.json)
+    - [Sentinel1 Item](examples/items/Sentinel1.json)
+    - [Sentinel2L1C Item](examples/items/Sentinel2L1C.json)
 - [JSON Schema](./schema.json)
 
 ## Item Properties Fields
@@ -126,10 +134,10 @@ The following specifications are relevant here:
 | gsd                | number     | Ground sample distance as defined in common metadata. |
 | eo:cloud_cover     | number     | Cloud cover as defined in the EO extension. |
 | eo:snow_cover      | number     | Snow/ice cover as defined in the EO extension. |
-| view:azimuth       | number     | Time of publication as defined in the Viewing Angles extension. |
-| view:off_nadir     | number     | **REQUIRED**. The satellite's across-track, off-nadir viewing angle. |
-| view:sun_azimuth   | number     | **REQUIRED**. Time of publication as defined in the Viewing Angles extension. |
-| view:sun_elevation | number     | **REQUIRED**. Time of publication as defined in the Viewing Angles extension. |
+| view:azimuth       | number     | Viewing azimuth angle (0 - 360) as defined in the Viewing Angles extension. |
+| view:off_nadir     | number     | **REQUIRED**. The satellite's across-track, off-nadir viewing angle (0 - 90). |
+| view:sun_azimuth   | number     | **REQUIRED**. Sun azimuth angle as defined in the Viewing Angles extension (0 - 360). |
+| view:sun_elevation | number     | **REQUIRED**. Sun elevation angle as defined in the Viewing Angles extension (-90 - 90). |
 
 **Additional REQUIRED fields per `pl:item_type`:**
 

@@ -15,16 +15,15 @@
     "view:off_nadir": 0,
     "view:sun_azimuth": 122.5,
     "view:sun_elevation": 58.1,
-    "pl:collection": "2",
-    "pl:data_type": "L1TP",
+    "landsat:collection_number": "02",
     "pl:item_type": "Landsat8L1G",
     "pl:pixel_resolution": 30,
-    "pl:processed": "2020-09-02T11:20:42Z",
-    "pl:product_id": "LC08_L1TP_219065_20180102_20200902_02_T1",
+    "externalIds": [
+      "LC08_L1TP_219065_20180102_20200902_02_T1"
+    ],
     "pl:quality_category": "standard",
-    "pl:usable_data": 0.686,
-    "pl:wrs_path": 219,
-    "pl:wrs_row": 65,
+    "landsat:wrs_path": 219,
+    "landsat:wrs_row": 65,
     "published": "2022-04-13T20:39:05Z",
     "proj:epsg": null,
     "datetime": "2018-01-02T13:00:06.942405Z"

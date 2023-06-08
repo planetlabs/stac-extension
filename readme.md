@@ -46,6 +46,14 @@ The deprecated item types `PSScene3Band` and `PSScene4Band` are not supported an
   - SkySat:
     - [SkySatCollect Item](examples/items/skysatcollect.json)
     - [SkySatScene Item](examples/items/skysatscene.json)
+  - Others:
+    - [Landsat8L1G Item](examples/items/Landsat8L1G.json)
+    - [MOD09GA Item](examples/items/MOD09GA.json)
+    - [MOD09GQ Item](examples/items/MOD09GQ.json)
+    - [MYD09GA Item](examples/items/MYD09GA.json)
+    - [MYD09GQ Item](examples/items/MYD09GQ.json)
+    - [Sentinel1 Item](examples/items/Sentinel1.json)
+    - [Sentinel2L1C Item](examples/items/Sentinel2L1C.json)
 - [JSON Schema](./schema.json)
 
 ## Item Properties Fields

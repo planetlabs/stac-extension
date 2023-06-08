@@ -15,20 +15,18 @@
     "view:off_nadir": 7.3,
     "view:sun_azimuth": 124.39,
     "view:sun_elevation": 62.85,
-    "pl:abs_orbit_number": 13225,
+    "sat:absolute_orbit": 13225,
     "pl:black_fill": 0.89,
-    "pl:data_type": "L1C",
-    "pl:datatake_id": "GS2A_20180102T222751_013225_N02.06",
-    "pl:granule_id": "L1C_T01LAL_A013225_20180102T222753",
     "pl:item_type": "Sentinel2L1C",
-    "pl:mgrs_grid_id": "01LAL",
+    "grid:code": "MGRS-01LAL",
     "pl:pixel_resolution": 10,
-    "pl:product_generation_time": "2018-01-02T23:31:09Z",
-    "pl:product_id": "S2A_MSIL1C_20180102T222751_N0206_R072_T01LAL_20180102T233109",
     "pl:quality_category": "standard",
-    "pl:rel_orbit_number": 72,
-    "pl:s2_processor_version": "02.06",
-    "pl:usable_data": 0.11,
+    "sat:relative_orbit": 72,
+    "externalIds": [
+      "S2A_MSIL1C_20180102T222751_N0206_R072_T01LAL_20180102T233109",
+      "L1C_T01LAL_A013225_20180102T222753",
+      "GS2A_20180102T222751_013225_N02.06"
+    ],
     "published": "2019-02-22T12:06:26Z",
     "proj:epsg": null,
     "datetime": "2018-01-02T22:27:53.459000Z"
@@ -796,7 +794,9 @@
     "https://stac-extensions.github.io/eo/v1.0.0/schema.json",
     "https://stac-extensions.github.io/view/v1.0.0/schema.json",
     "https://stac-extensions.github.io/raster/v1.1.0/schema.json",
-    "https://stac-extensions.github.io/projection/v1.0.0/schema.json"
+    "https://stac-extensions.github.io/projection/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/sat/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/grid/v1.1.0/schema.json"
   ],
   "collection": "90190d3b-d9b2-4107-bb7d-3c6078bfaaf8: Sentinel2L1C"
 }

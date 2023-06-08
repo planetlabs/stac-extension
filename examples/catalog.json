@@ -49,6 +49,41 @@
       "href": "./items/skysatscene.json",
       "rel": "item",
       "type": "application/geo+json"
+    },
+    {
+      "href": "./items/Landsat8L1G.json",
+      "rel": "item",
+      "type": "application/geo+json"
+    },
+    {
+      "href": "./items/MOD09GA.json",
+      "rel": "item",
+      "type": "application/geo+json"
+    },
+    {
+      "href": "./items/MOD09GQ.json",
+      "rel": "item",
+      "type": "application/geo+json"
+    },
+    {
+      "href": "./items/MYD09GA.json",
+      "rel": "item",
+      "type": "application/geo+json"
+    },
+    {
+      "href": "./items/MYD09GQ.json",
+      "rel": "item",
+      "type": "application/geo+json"
+    },
+    {
+      "href": "./items/Sentinel1.json",
+      "rel": "item",
+      "type": "application/geo+json"
+    },
+    {
+      "href": "./items/Sentinel2L1C.json",
+      "rel": "item",
+      "type": "application/geo+json"
     }
   ]
 }

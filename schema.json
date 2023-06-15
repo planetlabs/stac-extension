@@ -1099,7 +1099,7 @@
               "const": "usgs"
             },
             "platform": {
-              "pattern": "Terra|Aqua"
+              "pattern": "^Terra|Aqua$"
             }
           }
         },
@@ -1109,7 +1109,7 @@
               "const": "planetscope"
             },
             "platform": {
-              "pattern": "[0-9a-f]{4,}"
+              "pattern": "^[0-9a-f]{4,}$"
             },
             "instruments": {
               "minItems": 1,
@@ -1129,7 +1129,7 @@
               "const": "rapideye"
             },
             "platform": {
-              "pattern": "RapidEye-\\d+"
+              "pattern": "^RapidEye-\\d+$"
             }
           }
         },
@@ -1139,7 +1139,7 @@
               "const": "esa"
             },
             "platform": {
-              "pattern": "Sentinel\\S+"
+              "pattern": "^Sentinel\\S+$"
             }
           }
         },
@@ -1149,7 +1149,7 @@
               "const": "skysat"
             },
             "platform": {
-              "pattern": "SSC\\d+"
+              "pattern": "^SS(C\\d+|01|02)$"
             }
           }
         }

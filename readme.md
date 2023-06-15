@@ -175,7 +175,7 @@ The following patterns are allowed for the Planet Labs satellites:
 
 - PlanetScope: `[0-9a-f]{2,}` (e.g. `0c08`, `227c`, etc.)
 - RapidEye: `RapidEye-\d+` (e.g. `RapidEye-1`, `RapidEye-2`, etc.)
-- SkySat: `SSC\\d+` (e.g. `SSC1`, `SSC19`, etc.)
+- SkySat: `SS(C\\d+|01|02)` (e.g. `SS01`, `SSC1`, `SSC19`, etc.)
 
 For non Planet Satellites:
 

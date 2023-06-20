@@ -30,6 +30,7 @@ Releases are published by creating a new tag.  To tag a new release off the late
 
 ```bash
 # replace 1.2.3 with the release version
+# include the v before the version number
 TAG=v1.2.3
 git fetch origin
 git checkout main
